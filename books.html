@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Library — Signal333 Publishing</title>
+<meta name="description" content="Signal333 Publishing — four series of books on AI, strategy, trading, and structured thinking for families. By Garry Short.">
+<meta name="keywords" content="Signal333 Publishing, The AI Operator Series, Opportunity Intelligence, Applied Systems Trilogy, Raising Thinkers, Garry Short, AI books, business books">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Bebas+Neue&display=swap');
+
+:root {
+  --bg:         #f5f7fa;
+  --bg2:        #eef1f5;
+  --surface:    #ffffff;
+  --border:     #e2e8f0;
+  --text:       #0f172a;
+  --body-text:  #334155;
+  --muted:      #64748b;
+  --faint:      #94a3b8;
+  --accent:     #3b82f6;
+  --brand-blue: #3b82f6;
+  --dark:       #0f172a;
+  --dark2:      #1e293b;
+  --display: 'Bebas Neue', sans-serif;
+  --body:    'Barlow', sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--body-text);font-family:var(--body);font-weight:300;line-height:1.7;overflow-x:hidden;}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:60px;background:rgba(15,23,42,0.97);backdrop-filter:blur(8px);}
+.nav-logo{font-family:var(--display);font-size:1.4rem;color:#fff;letter-spacing:0.04em;}
+.os{color:var(--brand-blue);font-size:0.75em;vertical-align:baseline;letter-spacing:0.04em;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);transition:color 0.2s;}
+.nav-links a:hover{color:#fff;}
+.nav-back{font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.2);padding:6px 16px;border-radius:4px;transition:all 0.2s;}
+.nav-back:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
+
+/* HERO */
+.hero{background:var(--dark);padding:120px 2rem 80px;text-align:center;}
+.hero-eyebrow{font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--brand-blue);margin-bottom:16px;}
+.hero-title{font-family:var(--display);font-size:clamp(3rem,8vw,6rem);color:#fff;letter-spacing:0.02em;line-height:1;}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.5);margin-top:16px;font-weight:300;max-width:560px;margin-left:auto;margin-right:auto;}
+.hero-divider{width:60px;height:2px;background:var(--brand-blue);margin:32px auto;}
+
+/* CONTAINER */
+.container{max-width:1100px;margin:0 auto;padding:0 2rem;}
+
+/* SERIES SECTION */
+.series{padding:72px 0;border-bottom:1px solid var(--border);}
+.series:last-child{border-bottom:none;}
+.series-dark{background:var(--dark);padding:72px 0;}
+.series-eyebrow{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--brand-blue);margin-bottom:8px;}
+.series-dark .series-eyebrow{color:var(--brand-blue);}
+.series-title{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.8rem);color:var(--text);letter-spacing:0.02em;margin-bottom:8px;}
+.series-dark .series-title{color:#fff;}
+.series-desc{color:var(--muted);max-width:640px;margin-bottom:40px;font-size:0.95rem;}
+.series-dark .series-desc{color:rgba(255,255,255,0.5);}
+
+/* BOOK GRID */
+.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:28px;margin-bottom:28px;}
+.book-card{display:flex;flex-direction:column;}
+.book-cover{border-radius:6px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.12);margin-bottom:14px;aspect-ratio:2/3;background:var(--dark2);position:relative;}
+.book-cover img{width:100%;height:100%;object-fit:cover;}
+.book-cover-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;}
+.book-cover-placeholder span{font-family:var(--display);font-size:1rem;color:rgba(255,255,255,0.7);letter-spacing:0.04em;line-height:1.3;}
+.book-title{font-size:0.9rem;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.3;}
+.series-dark .book-title{color:#fff;}
+.book-sub{font-size:0.78rem;color:var(--muted);margin-bottom:12px;line-height:1.4;}
+.series-dark .book-sub{color:rgba(255,255,255,0.4);}
+.book-link{font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--brand-blue);font-weight:500;transition:opacity 0.2s;}
+.book-link:hover{opacity:0.7;}
+
+/* SERIES FOOTER */
+.series-footer{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:12px;}
+.series-note{font-size:0.83rem;color:var(--muted);}
+.series-dark .series-note{color:rgba(255,255,255,0.35);}
+.btn-series{display:inline-block;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px 22px;border-radius:4px;border:1px solid var(--accent);color:var(--accent);transition:all 0.2s;font-weight:500;}
+.btn-series:hover{background:var(--accent);color:#fff;}
+.btn-series-dark{border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.7);}
+.btn-series-dark:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.5);color:#fff;}
+
+/* SIGNAL333 FOOTER */
+.pub-footer{background:var(--dark);padding:48px 2rem;text-align:center;border-top:1px solid rgba(255,255,255,0.06);}
+.pub-footer-name{font-family:var(--display);font-size:1.6rem;color:#fff;letter-spacing:0.06em;margin-bottom:8px;}
+.pub-footer-sub{font-size:0.83rem;color:rgba(255,255,255,0.35);margin-bottom:24px;}
+.pub-footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;}
+.pub-footer-links a{font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);transition:color 0.2s;}
+.pub-footer-links a:hover{color:#fff;}
+
+@media(max-width:640px){
+  .book-grid{grid-template-columns:repeat(2,1fr);gap:20px;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">LIFE<span class="os">OS</span></div>
+  <ul class="nav-links">
+    <li><a href="#ai-series">AI Series</a></li>
+    <li><a href="#oi-series">OI Series</a></li>
+    <li><a href="#trading">Trading</a></li>
+    <li><a href="#parenting">Parenting</a></li>
+  </ul>
+  <a href="https://oi-ecosystem.github.io/lifeos/" class="nav-back">← LifeOS</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Signal333 Publishing</div>
+  <div class="hero-title">THE LIBRARY</div>
+  <p class="hero-sub">Four series. One philosophy. Written from inside real institutional-level work — not theory.</p>
+  <div class="hero-divider"></div>
+</div>
+
+<!-- ── AI OPERATOR SERIES ─────────────────────────── -->
+<section id="ai-series" class="series">
+  <div class="container">
+    <p class="series-eyebrow">Signal333 Publishing</p>
+    <h2 class="series-title">The AI Operator Series</h2>
+    <p class="series-desc">For operators, builders, and strategic thinkers. Written alongside the development of real Tier-1 infrastructure assets. This is not theory — it is documented execution.</p>
+    <div class="book-grid">
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Aspirational_AI_Builder.jpg" alt="Aspirational AI Builder" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Aspirational AI Builder</span></div>'">
+        </div>
+        <p class="book-title">Aspirational AI Builder</p>
+        <p class="book-sub">From Aspirational to Operational</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/The_AI_Operator.jpg" alt="The AI Operator" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>The AI Operator</span></div>'">
+        </div>
+        <p class="book-title">The AI Operator</p>
+        <p class="book-sub">Real Business Building with AI</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Human_Strategy.jpg" alt="Human Strategy in the Age of AI" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Human Strategy in the Age of AI</span></div>'">
+        </div>
+        <p class="book-title">Human Strategy in the Age of AI</p>
+        <p class="book-sub">Using Machines to Strengthen Thinking</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/The_AI_Operator_Method.jpg" alt="The AI Operator Method" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>The AI Operator Method</span></div>'">
+        </div>
+        <p class="book-title">The AI Operator Method</p>
+        <p class="book-sub">The Refinement / Compression Loop</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+    </div>
+    <div class="series-footer">
+      <a href="https://amazon.com/author/garryshort" target="_blank" class="btn-series">View on Amazon</a>
+      <span class="series-note">Complete Professional Editions also available on Kobo and Google Play Books through Signal333 Publishing.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── OPPORTUNITY INTELLIGENCE ───────────────────── -->
+<section id="oi-series" class="series-dark series">
+  <div class="container">
+    <p class="series-eyebrow">Opportunity Intelligence</p>
+    <h2 class="series-title">The OI Series</h2>
+    <p class="series-desc">Ten volumes on signal, pattern, decision, and strategy. A complete framework for thinking clearly about opportunity in complex environments.</p>
+    <div class="book-grid">
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/AI_Been_There.jpg" alt="AI Been There Done That" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>AI — Been There, Done That</span></div>'">
+        </div>
+        <p class="book-title">AI — Been There, Done That</p>
+        <p class="book-sub">Vol. 1</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Signal_Economy.jpg" alt="The Signal Economy" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>The Signal Economy</span></div>'">
+        </div>
+        <p class="book-title">The Signal Economy</p>
+        <p class="book-sub">Vol. 2</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Signal_Infrastructure.jpg" alt="Signal Infrastructure" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Signal Infrastructure</span></div>'">
+        </div>
+        <p class="book-title">Signal Infrastructure</p>
+        <p class="book-sub">Vol. 3</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Pattern_Thinkers.jpg" alt="Pattern Thinkers" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Pattern Thinkers</span></div>'">
+        </div>
+        <p class="book-title">Pattern Thinkers</p>
+        <p class="book-sub">Vol. 4</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Decision_Layer.jpg" alt="The Decision Layer" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>The Decision Layer</span></div>'">
+        </div>
+        <p class="book-title">The Decision Layer</p>
+        <p class="book-sub">Vol. 5</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Strategy_Engine.jpg" alt="The Strategy Engine" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>The Strategy Engine</span></div>'">
+        </div>
+        <p class="book-title">The Strategy Engine</p>
+        <p class="book-sub">Vol. 6</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Model_Builders.jpg" alt="Model Builders" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Model Builders</span></div>'">
+        </div>
+        <p class="book-title">Model Builders</p>
+        <p class="book-sub">Vol. 7</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Attention_Discipline.jpg" alt="Attention Discipline" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Attention Discipline</span></div>'">
+        </div>
+        <p class="book-title">Attention Discipline</p>
+        <p class="book-sub">Vol. 8</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Signal_Mind.jpg" alt="The Signal Mind" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>The Signal Mind</span></div>'">
+        </div>
+        <p class="book-title">The Signal Mind</p>
+        <p class="book-sub">Vol. 9</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Strategic_Silence.jpg" alt="Strategic Silence" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Strategic Silence</span></div>'">
+        </div>
+        <p class="book-title">Strategic Silence</p>
+        <p class="book-sub">Vol. 10</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+    </div>
+    <div class="series-footer">
+      <a href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank" class="btn-series btn-series-dark">Explore the Series</a>
+      <a href="https://amazon.com/author/garryshort" target="_blank" class="btn-series btn-series-dark">View on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── APPLIED SYSTEMS TRILOGY ────────────────────── -->
+<section id="trading" class="series">
+  <div class="container">
+    <p class="series-eyebrow">Applied Systems Trilogy</p>
+    <h2 class="series-title">The Trading Trilogy</h2>
+    <p class="series-desc">Three books on market principles, strategic positioning, and signal-based trading. Drawn from fifteen years of real-world market operation.</p>
+    <div class="book-grid" style="grid-template-columns:repeat(3,1fr);max-width:640px;">
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/The_Market_Principle_cover.jpg" alt="The Market Principle">
+        </div>
+        <p class="book-title">The Market Principle</p>
+        <p class="book-sub">Applied Systems Trilogy — Book 1</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/The_Positioning_Advantage_cover.jpg" alt="The Positioning Advantage">
+        </div>
+        <p class="book-title">The Positioning Advantage</p>
+        <p class="book-sub">Applied Systems Trilogy — Book 2</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/The_Signal_Trader_cover.jpg" alt="The Signal Trader">
+        </div>
+        <p class="book-title">The Signal Trader</p>
+        <p class="book-sub">Applied Systems Trilogy — Book 3</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+    </div>
+    <div class="series-footer">
+      <a href="https://amazon.com/author/garryshort" target="_blank" class="btn-series">View on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── RAISING THINKERS ───────────────────────────── -->
+<section id="parenting" class="series-dark series">
+  <div class="container">
+    <p class="series-eyebrow">Raising Thinkers</p>
+    <h2 class="series-title">Practical Systems, Not Parenting Theories</h2>
+    <p class="series-desc">Ten books for parents who want structure, not theory. From behaviour and calm to safe exits and the long game — a complete thinking framework for children aged 7 to 13.</p>
+    <div class="book-grid">
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Behaviour_and_Calm.jpg" alt="Behaviour and Calm" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Behaviour and Calm</span></div>'">
+        </div>
+        <p class="book-title">Behaviour and Calm</p>
+        <p class="book-sub">Book 1</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Routines_and_Structure.jpg" alt="Routines and Daily Structure" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Routines and Daily Structure</span></div>'">
+        </div>
+        <p class="book-title">Routines and Daily Structure</p>
+        <p class="book-sub">Book 2</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="covers/Thinking_and_Decisions.jpg" alt="Thinking and Decision Making" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder\'><span>Thinking and Decision Making</span></div>'">
+        </div>
+        <p class="book-title">Thinking and Decision Making</p>
+        <p class="book-sub">Book 3</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover"><div class="book-cover-placeholder"><span>When Something Feels Wrong</span></div></div>
+        <p class="book-title">When Something Feels Wrong</p>
+        <p class="book-sub">Book 4</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover"><div class="book-cover-placeholder"><span>Your Circle</span></div></div>
+        <p class="book-title">Your Circle</p>
+        <p class="book-sub">Book 5</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover"><div class="book-cover-placeholder"><span>The Pressure Test</span></div></div>
+        <p class="book-title">The Pressure Test</p>
+        <p class="book-sub">Book 6</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover"><div class="book-cover-placeholder"><span>Safe Exits</span></div></div>
+        <p class="book-title">Safe Exits</p>
+        <p class="book-sub">Book 7</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover"><div class="book-cover-placeholder"><span>Speaking Up</span></div></div>
+        <p class="book-title">Speaking Up</p>
+        <p class="book-sub">Book 8</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover"><div class="book-cover-placeholder"><span>Reading the Room</span></div></div>
+        <p class="book-title">Reading the Room</p>
+        <p class="book-sub">Book 9</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover"><div class="book-cover-placeholder"><span>The Long Game</span></div></div>
+        <p class="book-title">The Long Game</p>
+        <p class="book-sub">Book 10</p>
+        <a href="https://amazon.com/author/garryshort" target="_blank" class="book-link">Amazon →</a>
+      </div>
+    </div>
+    <div class="series-footer">
+      <a href="https://amazon.com/author/garryshort" target="_blank" class="btn-series btn-series-dark">View on Amazon</a>
+      <span class="series-note">B-Useful Parenting Systems · Raising Thinkers Series</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="pub-footer">
+  <div class="pub-footer-name">Signal333 Publishing</div>
+  <p class="pub-footer-sub">Think clearly. Decide deliberately. Execute with discipline.</p>
+  <div class="pub-footer-links">
+    <a href="https://oi-ecosystem.github.io/lifeos/">LifeOS</a>
+    <a href="https://oi-ecosystem.github.io/opportunity-intelligence/">Opportunity Intelligence</a>
+    <a href="https://oi-ecosystem.github.io/operator-stack/">Operator Stack</a>
+    <a href="https://amazon.com/author/garryshort" target="_blank">Amazon Author Page</a>
+    <a href="https://opportunity-intelligence.lemonsqueezy.com/" target="_blank">Access the System</a>
+  </div>
+</div>
+
+</body>
+</html>
