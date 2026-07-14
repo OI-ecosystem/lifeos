@@ -777,6 +777,45 @@ h2{
   font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
   color:var(--accent);
 }
+.sys-card.sys-featured{
+  grid-column:1 / -1;
+  position:relative;
+  padding:32px 30px;
+  background:linear-gradient(135deg,#0b1220,#111c30);
+  border:1px solid rgba(59,130,246,0.4);
+  box-shadow:0 8px 32px rgba(59,130,246,0.15);
+  min-height:auto;
+}
+.sys-card.sys-featured:hover{
+  border-color:var(--accent);
+  box-shadow:0 12px 40px rgba(59,130,246,0.22);
+}
+.sys-card.sys-featured h3{
+  font-size:26px;
+  color:#ffffff;
+}
+.sys-card.sys-featured p{
+  font-size:13.5px;
+  color:rgba(203,213,225,0.85);
+  max-width:640px;
+}
+.sys-card.sys-featured .sys-go{
+  color:#7cb0ff;
+  font-weight:500;
+}
+.sys-featured-badge{
+  display:inline-block;
+  font-size:10px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:#7cb0ff;
+  background:rgba(59,130,246,0.14);
+  border:1px solid rgba(59,130,246,0.35);
+  padding:4px 10px;
+  border-radius:3px;
+  margin-bottom:14px;
+}
+
 .sys-card.sys-placeholder{
   background:var(--bg2);
   border-style:dashed;
@@ -978,6 +1017,13 @@ footer{
 
     <div class="sys-grid">
 
+      <a class="sys-card sys-featured reveal" href="https://oi-ecosystem.github.io/signal-intelligence-website/" target="_blank">
+        <span class="sys-featured-badge">Flagship &middot; Now Live</span>
+        <h3>Signal Intelligence</h3>
+        <p>See tomorrow's opportunities through the lens of history — live signal tracking across crypto, collectibles, AI, and energy, matched against validated historical precedent.</p>
+        <span class="sys-go">Visit Signal Intelligence →</span>
+      </a>
+
       <a class="sys-card reveal" href="https://oi-ecosystem.github.io/1line/" target="_blank">
         <h3>1LINE</h3>
         <p>Enter 1LINE about a situation or a decision. Get to the clarity that matters.</p>
@@ -1025,12 +1071,6 @@ footer{
         <p>NFTs and real-world asset drops from the Signal333 ecosystem.</p>
         <span class="sys-go">Visit OpenSea →</span>
       </a>
-
-      <div class="sys-card sys-placeholder reveal">
-        <h3>Signal Intelligence</h3>
-        <p>The flagship commercial platform — reading the signal before everyone else does.</p>
-        <span class="sys-go sys-go--placeholder">Coming Soon</span>
-      </div>
 
       <div class="sys-card sys-placeholder reveal">
         <h3>Prospect Intelligence</h3>
