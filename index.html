@@ -565,6 +565,20 @@ h2{
 
 .layer-buttons{display:flex;flex-direction:column;gap:10px;}
 
+.layer-includes{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-bottom:24px;
+}
+.layer-includes span{
+  font-size:11px;
+  letter-spacing:0.03em;
+  color:var(--muted);
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:5px 12px;
+}
+
 /* ── INSIDE ───────────────────────────────── */
 #inside{
   padding:clamp(80px,10vw,140px) 0;
@@ -964,7 +978,6 @@ footer{
     <li><a href="#start">Start</a></li>
     <li><a href="books.html">Books</a></li>
   </ul>
-  <a href="https://opportunity-intelligence.lemonsqueezy.com/" class="nav-cta" target="_blank">Access the System</a>
   <button class="nav-hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -1060,6 +1073,12 @@ footer{
         <span class="sys-go">Visit B-Useful →</span>
       </a>
 
+      <a class="sys-card reveal" href="https://oi-ecosystem.github.io/airdrop-ecosystem/hunter-intelligence/index.html" target="_blank">
+        <h3>Hunter Intelligence</h3>
+        <p>AI-scored airdrop protocol intelligence — 20 protocols ranked on a 7-factor conviction model, live TVL data, daily briefings.</p>
+        <span class="sys-go">Visit Hunter Intelligence →</span>
+      </a>
+
       <a class="sys-card reveal" href="https://oi-ecosystem.github.io/rcloop/" target="_blank">
         <h3>RC Loop</h3>
         <p>Resume and spreadsheet creator. Enter your details, get tailored expert documents.</p>
@@ -1078,41 +1097,6 @@ footer{
         <span class="sys-go sys-go--placeholder">Coming Soon</span>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<section id="start-anywhere">
-  <div class="container">
-    <div class="start-anywhere-inner reveal">
-      <h3>Start anywhere. Get value immediately.</h3>
-      <p class="sa-sub">You don't need the full system to begin.</p>
-      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Start with what you need:</p>
-      <div class="sa-items">
-        <div class="sa-item">
-          <span class="sa-item-label">Plan your life?</span>
-          <span class="sa-item-arrow">→</span>
-          <span class="sa-item-desc">WEEKLY <span style="color:var(--faint);">(part of Operator Stack)</span></span>
-        </div>
-        <div class="sa-item">
-          <span class="sa-item-label">Control your money?</span>
-          <span class="sa-item-arrow">→</span>
-          <span class="sa-item-desc">INCOME <span style="color:var(--faint);">(part of Operator Stack)</span></span>
-        </div>
-        <div class="sa-item">
-          <span class="sa-item-label">Control your career?</span>
-          <span class="sa-item-arrow">→</span>
-          <span class="sa-item-desc">RCLOOP <span style="color:var(--faint);">(Resume Creator — ATS standard and structured)</span></span>
-        </div>
-        <div class="sa-closer">
-          <span class="sa-closer-label">And when you're ready:</span>
-        </div>
-        <div class="sa-closer" style="border-top:none;padding-top:0;">
-          <span class="sa-closer-label">LIFE<span class="os">OS</span></span>
-          <span class="sa-closer-arrow">→</span>
-          <span class="sa-closer-desc">see how it all connects</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1162,16 +1146,24 @@ footer{
     <div class="layers-head reveal">
       <span class="label">Core structure</span>
       <div class="section-rule" style="margin:0 auto 18px;"></div>
-      <h2>Two layers.<br>One system.</h2>
-      <p>Each layer is a complete system in its own right. Together, they form LIFE<span class="os">OS</span>.</p>
-      <p style="font-size:14px;color:var(--muted);margin-top:10px;">Most people have one without the other. LIFE<span class="os">OS</span> connects both.</p>
+      <h2>Two layers.<br>Multiple systems.<br>One architecture.</h2>
+      <p>Every system in LIFE<span class="os">OS</span> sits inside one of two layers. Together, they form the architecture.</p>
+      <p style="font-size:14px;color:var(--muted);margin-top:10px;">Most people build one layer. LIFE<span class="os">OS</span> connects both.</p>
     </div>
     <div class="layers-grid">
       <div class="layer-card reveal">
         <div class="layer-number">01</div>
         <div class="layer-name">Understanding</div>
         <p class="layer-desc">See clearly. Understand what matters. Build a stronger point of view before you commit to any action.</p>
-        <div class="layer-powered">Powered by Opportunity Intelligence</div>
+        <p class="layer-desc" style="margin-top:10px;">Opportunity Intelligence is a structured framework for understanding signal, pattern, and decision-making. Built for people who want to see more clearly before they act, not after.</p>
+        <div class="layer-includes">
+          <span>Opportunity Intelligence</span>
+          <span>Signal Intelligence</span>
+          <span>Hunter Intelligence</span>
+          <span>1LINE</span>
+          <span>Thinking Dojo</span>
+          <span>Discovery Intelligence</span>
+        </div>
         <div class="layer-buttons">
           <a href="https://oi-ecosystem.github.io/opportunity-intelligence/" class="btn btn-primary btn-small" target="_blank">View Opportunity Intelligence</a>
           <a href="https://amazon.com/author/garryshort" class="btn btn-ghost btn-small" target="_blank">Explore the Books</a>
@@ -1181,39 +1173,52 @@ footer{
         <div class="layer-number">02</div>
         <div class="layer-name">Control</div>
         <p class="layer-desc">Turn understanding into structure, decisions, and forward movement. Stop reacting. Start operating.</p>
-        <div class="layer-powered">Powered by Operator Stack</div>
+        <p class="layer-desc" style="margin-top:10px;">Operator Stack is a modular system for execution, decisions, and structured action. Built for people who want to move with clarity, not just intention.</p>
+        <div class="layer-includes">
+          <span>Operator Stack</span>
+          <span>RC Loop</span>
+          <span>B-Useful</span>
+        </div>
         <div class="layer-buttons">
           <a href="https://oi-ecosystem.github.io/operator-stack/" class="btn btn-primary btn-small" target="_blank">View Operator Stack</a>
-          <a href="https://opportunity-intelligence.lemonsqueezy.com/" class="btn btn-ghost btn-small" target="_blank">Access the System</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── INSIDE ────────────────────────────────── -->
-<section id="inside">
+<section id="start-anywhere">
   <div class="container">
-    <div class="inside-head reveal">
-      <span class="label">Components</span>
-      <div class="section-rule"></div>
-      <h2>Inside LIFE<span class="os">OS</span></h2>
-    </div>
-    <div class="inside-grid">
-      <div class="inside-card reveal">
-        <div class="inside-tag">Understanding Layer</div>
-        <h3>Opportunity Intelligence</h3>
-        <p>A structured framework for understanding signal, pattern, and decision-making. Built for people who want to see more clearly before they act — not after.</p>
-        <a href="https://oi-ecosystem.github.io/opportunity-intelligence/" class="btn btn-ghost btn-small" target="_blank">View Opportunity Intelligence →</a>
+    <div class="start-anywhere-inner reveal">
+      <h3>Start anywhere. Get value immediately.</h3>
+      <p class="sa-sub">You don't need the full system to begin.</p>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Start with what you need:</p>
+      <div class="sa-items">
+        <div class="sa-item">
+          <span class="sa-item-label">Plan your life?</span>
+          <span class="sa-item-arrow">→</span>
+          <span class="sa-item-desc">WEEKLY <span style="color:var(--faint);">(part of Operator Stack)</span></span>
+        </div>
+        <div class="sa-item">
+          <span class="sa-item-label">Control your money?</span>
+          <span class="sa-item-arrow">→</span>
+          <span class="sa-item-desc">INCOME <span style="color:var(--faint);">(part of Operator Stack)</span></span>
+        </div>
+        <div class="sa-item">
+          <span class="sa-item-label">Control your career?</span>
+          <span class="sa-item-arrow">→</span>
+          <span class="sa-item-desc">RCLOOP <span style="color:var(--faint);">(Resume Creator — ATS standard and structured)</span></span>
+        </div>
+        <div class="sa-closer">
+          <span class="sa-closer-label">And when you're ready:</span>
+        </div>
+        <div class="sa-closer" style="border-top:none;padding-top:0;">
+          <span class="sa-closer-label">LIFE<span class="os">OS</span></span>
+          <span class="sa-closer-arrow">→</span>
+          <span class="sa-closer-desc">see how it all connects</span>
+        </div>
       </div>
-      <div class="inside-card reveal" style="transition-delay:.15s">
-        <div class="inside-tag">Control Layer</div>
-        <h3>Operator Stack</h3>
-        <p>A modular system for execution, decisions, and structured action. Built for people who want to move with clarity — not just intention.</p>
-        <a href="https://oi-ecosystem.github.io/operator-stack/" class="btn btn-ghost btn-small" target="_blank">View Operator Stack →</a>
-      </div>
     </div>
-    <p class="reveal" style="text-align:center;font-size:13px;color:var(--muted);margin-top:28px;font-style:italic;">Each part works on its own. Together, they form a complete system.</p>
   </div>
 </section>
 
@@ -1239,7 +1244,22 @@ footer{
         </blockquote>
         <cite>LIFE<span class="os">OS</span> — The System</cite>
         <div style="margin-top:28px;">
-          <a href="#start" class="btn btn-primary">Find your entry point</a>
+          <a href="#" class="btn btn-primary" id="entry-point-toggle" onclick="var o=document.getElementById('entry-point-options');var open=o.style.display==='block';o.style.display=open?'none':'block';this.textContent=open?'Find your entry point':'Hide options';return false;">Find your entry point</a>
+          <div id="entry-point-options" style="display:none;margin-top:8px;">
+            <ul class="who-list" style="gap:0;">
+              <li><a href="https://oi-ecosystem.github.io/rcloop/" target="_blank" style="color:inherit;text-decoration:none;">I need a CV → RC Loop</a></li>
+              <li><a href="https://oi-ecosystem.github.io/operator-stack/" target="_blank" style="color:inherit;text-decoration:none;">I want to plan my week → Operator Stack (Weekly)</a></li>
+              <li><a href="https://oi-ecosystem.github.io/operator-stack/" target="_blank" style="color:inherit;text-decoration:none;">I want to control my money → Operator Stack (Income)</a></li>
+              <li><a href="https://oi-ecosystem.github.io/1line/" target="_blank" style="color:inherit;text-decoration:none;">I need clarity on a decision → 1LINE</a></li>
+              <li><a href="https://oi-ecosystem.github.io/signal-intelligence-website/" target="_blank" style="color:inherit;text-decoration:none;">I want to spot market opportunities → Signal Intelligence</a></li>
+              <li><a href="https://oi-ecosystem.github.io/airdrop-ecosystem/hunter-intelligence/index.html" target="_blank" style="color:inherit;text-decoration:none;">I'm into crypto airdrops → Hunter Intelligence</a></li>
+              <li><a href="https://oi-ecosystem.github.io/thinking-dojo/" target="_blank" style="color:inherit;text-decoration:none;">I want to help a young mind think clearly → Thinking Dojo</a></li>
+              <li><a href="https://oi-ecosystem.github.io/b-useful/" target="_blank" style="color:inherit;text-decoration:none;">I want practical tools, not theory → B-Useful</a></li>
+              <li><a href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank" style="color:inherit;text-decoration:none;">I want the philosophy behind all this → The Books</a></li>
+              <li><a href="https://oi-ecosystem.github.io/signal333-publisher/" target="_blank" style="color:inherit;text-decoration:none;">I want to know how it all gets found → Discovery / Visibility Intelligence</a></li>
+              <li><a href="https://opensea.io/0xaf403f16e0c582daad19821e035a580faf29de57" target="_blank" style="color:inherit;text-decoration:none;">I want NFTs or real-world asset drops → OpenSea</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -1265,7 +1285,7 @@ footer{
       <p class="final-statement">LIFE<span class="os">OS</span> gives you <em>understanding</em> — and turns it into <em>control</em>.</p>
       <p class="final-sub">The system is already built.<br>Start where you need to.</p>
       <div class="final-buttons">
-        <a href="https://opportunity-intelligence.lemonsqueezy.com/" class="btn-cta-final" target="_blank">Explore the System</a>
+        <a href="https://oi-ecosystem.github.io/opportunity-intelligence/" class="btn-cta-final" target="_blank">Explore the System</a>
       </div>
     </div>
   </div>
@@ -1281,7 +1301,7 @@ footer{
         <li><a href="https://oi-ecosystem.github.io/operator-stack/" target="_blank">Operator Stack</a></li>
         <li><a href="#publishing" target="_blank">Books</a></li>
         <li><a href="https://amazon.com/author/garryshort" target="_blank">Amazon</a></li>
-        <li><a href="https://opportunity-intelligence.lemonsqueezy.com/" target="_blank">Access</a></li>
+        <li><a href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank">Access</a></li>
       </ul>
       <div style="font-size:0.75rem;color:var(--faint);margin-top:8px;">Signal333 Publishing</div>
       <div class="footer-copy">LIFE<span class="os">OS</span> &mdash; Understanding → Control</div>
