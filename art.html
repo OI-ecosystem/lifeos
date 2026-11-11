@@ -28,6 +28,9 @@
   nav{display:flex;gap:22px;flex-wrap:wrap}
   nav a{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;color:var(--muted)}
   nav a:hover{color:var(--navy)}
+  .back{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;color:var(--navy);border:1px solid var(--line);padding:6px 12px;white-space:nowrap}
+  .back:hover{border-color:var(--navy)}
+  @media (max-width:860px){.back{display:inline-block}}
 
   /* hero */
   .hero{max-width:1240px;margin:0 auto;padding:56px 28px 40px;display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:center}
@@ -124,6 +127,7 @@
       <a href="#masters">Masterworks</a>
       <a href="#offices">Offices</a>
     </nav>
+    <a class="back" href="/">&larr; ALPHA333</a>
   </div>
 </header>
 
@@ -248,7 +252,7 @@
 /* ============================================================
    SETTINGS — the only part you need to edit
    ============================================================ */
-const CONTACT_EMAIL = "hello@ta-ndinsky.com";   // set up this mailbox, or change it
+const CONTACT_EMAIL = "hello@alpha333.org";   // set up this mailbox, or change it
 const MORE_FORMATS_URL = "";                     // your Etsy shop link (leave "" to hide the line)
 
 // Prices per size. Edit freely.
