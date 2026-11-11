@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TA_ndinsky — Art made from the patterns traders trade</title>
+<meta name="description" content="TA_ndinsky: original abstract art by a trader. Chart patterns, market moments and human history in Kandinsky-inspired geometry. Series One: 33 works.">
+<meta property="og:title" content="TA_ndinsky — Series One">
+<meta property="og:description" content="Art made from the patterns traders trade.">
+<meta property="og:image" content="the-triple-bottom.jpg">
+<style>
+  :root{
+    --cream:#f5f0e6; --paper:#fbf8f2; --navy:#14213d; --ink:#1d2433;
+    --muted:#6b6b6b; --gold:#b8913b; --gold-soft:#e9d9b0; --line:#e3dccd;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .serif{font-family:Georgia,"Times New Roman",serif}
+  a{color:inherit}
+  section{scroll-margin-top:80px}
+
+  /* header */
+  header{position:sticky;top:0;z-index:20;background:rgba(245,240,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{max-width:1240px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{font-family:Georgia,serif;font-size:22px;font-style:italic;color:var(--navy);text-decoration:none;letter-spacing:.3px}
+  .logo span{color:var(--gold)}
+  nav{display:flex;gap:22px;flex-wrap:wrap}
+  nav a{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+  nav a:hover{color:var(--navy)}
+
+  /* hero */
+  .hero{max-width:1240px;margin:0 auto;padding:56px 28px 40px;display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:center}
+  .hero img{width:100%;display:block;box-shadow:0 18px 50px rgba(20,33,61,.18);cursor:zoom-in}
+  .eyebrow{font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .hero h1{font-family:Georgia,serif;font-weight:400;font-size:46px;line-height:1.1;color:var(--navy);margin-bottom:18px}
+  .hero p{color:#3c4250;margin-bottom:14px;font-size:16px}
+  .hero .cap{font-size:13px;color:var(--muted);margin-top:10px;font-style:italic}
+
+  /* sections */
+  .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+  .sec{padding:72px 0 24px}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-top:1px solid var(--line);padding-top:28px;margin-bottom:34px;flex-wrap:wrap}
+  .sec-head h2{font-family:Georgia,serif;font-weight:400;font-size:32px;color:var(--navy)}
+  .sec-head p{max-width:520px;color:var(--muted);font-size:15px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:48px 40px}
+  .grid.big{grid-template-columns:repeat(auto-fill,minmax(520px,1fr))}
+  .work img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;cursor:zoom-in;box-shadow:0 10px 30px rgba(20,33,61,.12);transition:transform .25s}
+  .work img:hover{transform:translateY(-3px)}
+  .work.wide img{aspect-ratio:3/1}
+  .work h3{font-family:Georgia,serif;font-weight:400;font-size:20px;color:var(--navy);margin-top:16px}
+  .work .line{font-size:14px;color:var(--muted);font-style:italic;margin:4px 0 12px}
+  .tag{display:inline-block;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-soft);padding:3px 8px;margin-bottom:12px}
+
+  .buy{display:flex;gap:8px;flex-wrap:wrap}
+  .buy a,.buy span{font-size:12px;letter-spacing:.5px;text-decoration:none;padding:8px 14px;border:1px solid var(--navy);color:var(--navy);transition:all .2s;white-space:nowrap}
+  .buy a:hover{background:var(--navy);color:var(--cream)}
+  .buy .soon{border-color:var(--line);color:#a09a8c;cursor:default}
+  .buy a.enq{border-color:var(--gold);color:#7a5f1f}
+  .buy a.enq:hover{background:var(--gold);color:#fff}
+
+  /* dark band for masters */
+  .dark{background:var(--navy);color:#e9e4d8;margin-top:72px}
+  .dark .sec-head{border-color:rgba(255,255,255,.12)}
+  .dark .sec-head h2,.dark .work h3{color:#f5f0e6}
+  .dark .sec-head p,.dark .work .line{color:#a9b0c0}
+  .dark .buy a.enq{color:var(--gold-soft)}
+  .dark .work img{box-shadow:0 14px 40px rgba(0,0,0,.4)}
+
+  /* story */
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:80px 0}
+  .story h2{font-family:Georgia,serif;font-weight:400;font-size:32px;color:var(--navy);margin-bottom:18px}
+  .story p{margin-bottom:14px;color:#3c4250}
+  .story blockquote{font-family:Georgia,serif;font-style:italic;font-size:22px;color:var(--navy);border-left:2px solid var(--gold);padding-left:22px;line-height:1.5}
+
+  /* offices */
+  .office{background:var(--paper);border:1px solid var(--line);padding:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;margin:40px 0 72px}
+  .office h2{font-family:Georgia,serif;font-weight:400;font-size:30px;color:var(--navy);margin-bottom:14px}
+  .office ul{list-style:none;color:#3c4250}
+  .office li{padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .btn{display:inline-block;margin-top:22px;background:var(--navy);color:var(--cream);text-decoration:none;padding:13px 26px;font-size:13px;letter-spacing:1.4px;text-transform:uppercase}
+  .btn:hover{background:var(--gold)}
+
+  .info{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:0 0 60px;font-size:14px;color:#3c4250}
+  .info h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:600}
+
+  .more{text-align:center;padding:26px 0 40px;border-top:1px solid var(--line)}
+  .more a{font-size:14px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+  .more a:hover{color:var(--navy)}
+
+  footer{border-top:1px solid var(--line);padding:30px 28px 50px;text-align:center;font-size:12px;color:#8a8478}
+  footer a{color:#8a8478}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;background:rgba(10,14,24,.94);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:50;padding:30px}
+  .lb.on{display:flex}
+  .lb img{max-width:94vw;max-height:78vh;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  .lb .t{font-family:Georgia,serif;color:#f5f0e6;font-size:22px;margin-top:20px}
+  .lb .r{color:#b8bfcc;font-style:italic;font-size:15px;margin-top:6px;max-width:700px;text-align:center}
+  .lb .x{position:absolute;top:18px;right:26px;color:#f5f0e6;font-size:32px;cursor:pointer;background:none;border:0}
+
+  @media (max-width:860px){
+    .hero,.story,.office{grid-template-columns:1fr}
+    .hero h1{font-size:36px}
+    .grid,.grid.big{grid-template-columns:1fr}
+    .info{grid-template-columns:1fr}
+    nav{display:none}
+    .office{padding:30px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="#top">TA<span>_</span>ndinsky</a>
+    <nav>
+      <a href="#limited">Editions</a>
+      <a href="#signal">Signal</a>
+      <a href="#moments">Market Moments</a>
+      <a href="#patterns">Patterns</a>
+      <a href="#human">Human Moments</a>
+      <a href="#masters">Masterworks</a>
+      <a href="#offices">Offices</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <img src="the-triple-bottom.jpg" alt="The Triple Bottom by TA_ndinsky" data-title="The Triple Bottom" data-reading="Decades of markets in one sweep. Three times the floor was tested. Three times it held.">
+    <div>
+      <div class="eyebrow">Series One · 33 works</div>
+      <h1>Art made from the patterns traders trade.</h1>
+      <p>A trader who has always seen markets as shape and rhythm, now painting them: candlesticks, breakouts, crashes and the human moments behind them, in bold geometric abstraction.</p>
+      <p>Every work hides a signal. Look closely.</p>
+      <p class="cap">Above: <em>The Triple Bottom</em> — Grand Master, token #333</p>
+    </div>
+  </div>
+
+  <!-- LIMITED EDITIONS -->
+  <section id="limited" class="wrap sec">
+    <div class="sec-head">
+      <h2>Limited Editions</h2>
+      <p>Editions of 33, numbered, with a certificate. When an edition sells out it closes, and is never reprinted.</p>
+    </div>
+    <div class="grid big" data-group="limited"></div>
+  </section>
+
+  <section id="signal" class="wrap sec">
+    <div class="sec-head">
+      <h2>The Signal</h2>
+      <p>Crop circles pressed into the wheat overnight — each one a chart pattern. A signal in the field.</p>
+    </div>
+    <div class="grid" data-group="signal"></div>
+  </section>
+
+  <section id="moments" class="wrap sec">
+    <div class="sec-head">
+      <h2>Market Moments</h2>
+      <p>The days that markets broke, bubbled and turned — painted as the shape they made.</p>
+    </div>
+    <div class="grid" data-group="moments"></div>
+  </section>
+
+  <section id="patterns" class="wrap sec">
+    <div class="sec-head">
+      <h2>Patterns</h2>
+      <p>The classic formations of technical analysis, as non-traders have never seen them.</p>
+    </div>
+    <div class="grid" data-group="patterns"></div>
+  </section>
+
+  <section id="human" class="wrap sec">
+    <div class="sec-head">
+      <h2>Human Moments</h2>
+      <p>History, technology and civilisation, reimagined through geometry — each with a market line running through it.</p>
+    </div>
+    <div class="grid" data-group="human"></div>
+  </section>
+
+  <!-- MASTERS -->
+  <div class="dark" id="masters">
+    <section class="wrap sec">
+      <div class="sec-head">
+        <h2>Grand Masters &amp; Masterworks</h2>
+        <p>One of one. These works are never printed. They will be offered to collectors on Ethereum, with full provenance. Private enquiries welcome.</p>
+      </div>
+      <div class="grid big" data-group="masters"></div>
+    </section>
+    <div style="height:56px"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="story">
+      <div>
+        <div class="eyebrow">The artist</div>
+        <h2>Why a trader paints.</h2>
+        <p>Traders spend their lives reading shapes: the curve of a cup and handle, the three peaks of a head and shoulders, the floor a market tests again and again. TA_ndinsky paints those shapes, together with the moments in history that made them.</p>
+        <p>The style is Kandinsky-inspired geometric abstraction. The concepts, the hidden signals and every final decision are the artist's own; AI is used as the brush. Each work has a full creation record.</p>
+      </div>
+      <div style="display:flex;align-items:center">
+        <blockquote>“Non-traders see a painting. Traders see the pattern. The rest is finding the signal.”</blockquote>
+      </div>
+    </div>
+
+    <section id="offices" class="office">
+      <div>
+        <div class="eyebrow">For offices, desks &amp; partners</div>
+        <h2>Art that says what your firm does.</h2>
+        <p style="color:#3c4250">For trading floors, prop firms, fintech and crypto offices, receptions and meeting rooms. Large formats, framing and installation can be arranged.</p>
+        <a class="btn" id="contactBtn" href="#">Enquire</a>
+      </div>
+      <ul>
+        <li>Office packages — curated sets for a floor or reception</li>
+        <li>Commissions — your firm's story, your best trade, your chart</li>
+        <li>Creator partnerships — an edition named for your setup</li>
+        <li>Events — prints for prizes, speakers and awards</li>
+        <li>Collectors — private enquiries on the 1/1 works</li>
+      </ul>
+    </section>
+
+    <div class="info">
+      <div><h4>The prints</h4>Giclée fine-art prints on archival matte paper, in the original 16:9 proportions. Small, Medium and Large. Frame not included.</div>
+      <div><h4>Delivery &amp; returns</h4>Each print is made to order and shipped directly to you. Delivery and returns details are shown at checkout.</div>
+      <div><h4>Provenance</h4>Every work is signed TA_ndinsky and recorded with its concept, versions and date. Limited editions come with a numbered certificate.</div>
+    </div>
+
+    <div class="more"><a id="moreLink" href="#" target="_blank" rel="noopener">Cards, square prints and gift sizes →</a></div>
+  </div>
+</main>
+
+<footer>
+  © <span id="yr"></span> TA_ndinsky · Part of <a href="/">ALPHA333</a><br>
+  TA_ndinsky is an independent artist identity. Kandinsky-inspired in style; not affiliated with or endorsed by the estate of Wassily Kandinsky or any institution.
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="x" id="lbx" aria-label="Close">×</button>
+  <img id="lbimg" alt="">
+  <div class="t" id="lbt"></div>
+  <div class="r" id="lbr"></div>
+</div>
+
+<script>
+/* ============================================================
+   SETTINGS — the only part you need to edit
+   ============================================================ */
+const CONTACT_EMAIL = "hello@ta-ndinsky.com";   // set up this mailbox, or change it
+const MORE_FORMATS_URL = "";                     // your Etsy shop link (leave "" to hide the line)
+
+// Prices per size. Edit freely.
+const PRICES = {
+  open:    { S: "£39",  M: "£79",  L: "£149" },
+  limited: { S: "£79",  M: "£149", L: "£249" }
+};
+
+// EASY WAY: 6 Stripe Payment Links in total (one per size per type).
+// The page adds ?client_reference_id=<artwork> so each payment in Stripe
+// shows which artwork was bought.
+const SIZE_LINKS = {
+  open:    { S: "", M: "", L: "" },
+  limited: { S: "", M: "", L: "" }
+};
+
+// OPTIONAL: a dedicated link for a specific piece and size overrides the above.
+// Empty links fall back to SIZE_LINKS; if both are empty the button shows "Coming soon".
+const LINKS = {
+  "part-1":            { S:"", M:"", L:"" },
+  "the-breakout":      { S:"", M:"", L:"" },
+  "risk-off":          { S:"", M:"", L:"" },
+  "signal-i":          { S:"", M:"", L:"" },
+  "signal-ii":         { S:"", M:"", L:"" },
+  "signal-iii":        { S:"", M:"", L:"" },
+  "black-monday":      { S:"", M:"", L:"" },
+  "black-wednesday":   { S:"", M:"", L:"" },
+  "the-flash":         { S:"", M:"", L:"" },
+  "below-zero":        { S:"", M:"", L:"" },
+  "tulip-fever":       { S:"", M:"", L:"" },
+  "the-gold-standard": { S:"", M:"", L:"" },
+  "timeline":          { S:"", M:"", L:"" },
+  "cup-and-handle":    { S:"", M:"", L:"" },
+  "head-and-shoulders":{ S:"", M:"", L:"" },
+  "the-doji":          { S:"", M:"", L:"" },
+  "the-smile":         { S:"", M:"", L:"" },
+  "the-invisible-market":{ S:"", M:"", L:"" },
+  "age-of-electricity":{ S:"", M:"", L:"" },
+  "birth-of-the-internet":{ S:"", M:"", L:"" },
+  "the-electric-revolution":{ S:"", M:"", L:"" },
+  "lightning":         { S:"", M:"", L:"" },
+  "the-network":       { S:"", M:"", L:"" },
+  "the-code-of-life":  { S:"", M:"", L:"" },
+  "orbits":            { S:"", M:"", L:"" },
+  "stars-a-line":      { S:"", M:"", L:"" }
+};
+
+/* ============================================================
+   THE COLLECTION — Series One (33 works)
+   ============================================================ */
+const WORKS = [
+  // Limited editions of 33
+  {id:"part-1", t:"The Human Moment — Part 1", g:"limited", type:"limited", r:"Ten defining moments of human history, one golden line running through them all."},
+  {id:"the-breakout", t:"The Breakout", g:"limited", type:"limited", r:"The pattern sets up, confirms, and breaks out."},
+  {id:"risk-off", t:"Risk Off", g:"limited", type:"limited", r:"The chart falls in the rain. He's hedged."},
+  // Signal
+  {id:"signal-i", t:"Signal I", g:"signal", type:"open", r:"Dawn. A spiral in the wheat."},
+  {id:"signal-ii", t:"Signal II", g:"signal", type:"open", r:"Moonlight. Columns in the field."},
+  {id:"signal-iii", t:"Signal III", g:"signal", type:"open", r:"Spring. Three peaks and a line."},
+  // Market moments
+  {id:"black-monday", t:"Black Monday", g:"moments", type:"open", r:"19 October 1987. Three tests of the high, then the fracture."},
+  {id:"black-wednesday", t:"Black Wednesday", g:"moments", type:"open", r:"16 September 1992. The band held, until it didn't."},
+  {id:"the-flash", t:"The Flash", g:"moments", type:"open", r:"6 May 2010. Down and back in minutes."},
+  {id:"below-zero", t:"Below Zero", g:"moments", type:"open", r:"20 April 2020. The floor everyone assumed was there."},
+  {id:"tulip-fever", t:"Tulip Fever", g:"moments", type:"open", r:"1637. Beauty, speculation, collapse."},
+  {id:"the-gold-standard", t:"The Gold Standard", g:"moments", type:"open", r:"1971. The anchor lets go."},
+  {id:"timeline", t:"Timeline", g:"moments", type:"open", wide:true, r:"From the Big Bang of 1986 to the age of AI."},
+  // Patterns
+  {id:"cup-and-handle", t:"Cup and Handle", g:"patterns", type:"open", r:"The base, the pause, the breakout."},
+  {id:"head-and-shoulders", t:"Head and Shoulders", g:"patterns", type:"open", r:"Three towers, one neckline."},
+  {id:"the-doji", t:"The Doji", g:"patterns", type:"open", r:"Open and close at the same level. The moment before the market decides."},
+  {id:"the-smile", t:"The Smile", g:"patterns", type:"open", r:"Calm at the centre, heat at the edges."},
+  {id:"the-invisible-market", t:"The Invisible Market", g:"patterns", type:"open", r:"The order book: every intention you can't see."},
+  // Human moments
+  {id:"age-of-electricity", t:"Age of Electricity", g:"human", type:"open", r:"An invisible force, harnessed."},
+  {id:"birth-of-the-internet", t:"Birth of the Internet", g:"human", type:"open", r:"A world becoming connected."},
+  {id:"the-electric-revolution", t:"The Electric Revolution", g:"human", type:"open", r:"Wheels, current and motion."},
+  {id:"lightning", t:"Lightning", g:"human", type:"open", r:"One bolt through fractured planes."},
+  {id:"the-network", t:"The Network", g:"human", type:"open", r:"A mind of its own."},
+  {id:"the-code-of-life", t:"The Code of Life", g:"human", type:"open", r:"A double helix, built from candles."},
+  {id:"orbits", t:"Orbits", g:"human", type:"open", r:"Gold rings on navy. Something is stepping up."},
+  {id:"stars-a-line", t:"Stars a Line", g:"human", type:"open", r:"Circles streaming into alignment."},
+  // Masters (1/1, never printed)
+  {id:"the-triple-bottom", t:"The Triple Bottom", g:"masters", type:"master", tag:"Grand Master · #333", r:"Three tests of the same floor. Then the breakout."},
+  {id:"five-sigma", t:"Five Sigma", g:"masters", type:"master", tag:"Grand Master", r:"Can you spot the God particle?"},
+  {id:"the-empty-pit", t:"The Empty Pit", g:"masters", type:"master", tag:"Grand Master", r:"The floor fell silent. But look closely: the pit is still trading."},
+  {id:"genesis", t:"Genesis", g:"masters", type:"master", tag:"Masterwork", r:"3 January 2009. Born in a crisis, by someone no one has ever seen."},
+  {id:"march-2020", t:"March 2020", g:"masters", type:"master", tag:"Masterwork", r:"One candle. Everyone remembers it."},
+  {id:"the-collision", t:"The Collision", g:"masters", type:"master", tag:"Masterwork · CERN", r:"The moment of impact."},
+  {id:"the-bubble-chamber", t:"The Bubble Chamber", g:"masters", type:"master", tag:"Masterwork · CERN", r:"What remains, spiralling outward."}
+];
+
+/* ============================================================ */
+const mail = s => `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(s)}`;
+
+function card(w){
+  const el = document.createElement("article");
+  el.className = "work" + (w.wide ? " wide" : "");
+  let buy = "";
+  if (w.type === "master") {
+    buy = `<a class="enq" href="${mail("Enquiry: " + w.t + " (1/1)")}">Enquire · 1 of 1</a>`;
+  } else {
+    const p = PRICES[w.type], l = LINKS[w.id] || {}, sl = SIZE_LINKS[w.type] || {};
+    const href = s => l[s] || (sl[s] ? sl[s] + (sl[s].includes("?") ? "&" : "?") + "client_reference_id=" + w.id : "");
+    buy = ["S","M","L"].map(s => href(s)
+      ? `<a href="${href(s)}" target="_blank" rel="noopener">${s} · ${p[s]}</a>`
+      : `<span class="soon">${s} · ${p[s]}</span>`).join("");
+  }
+  const tag = w.type === "limited" ? `<span class="tag">Edition of 33</span>`
+            : w.tag ? `<span class="tag">${w.tag}</span>` : "";
+  el.innerHTML = `
+    <img src="${w.id}.jpg" alt="${w.t} by TA_ndinsky" loading="lazy" data-title="${w.t}" data-reading="${w.r}">
+    <h3>${w.t}</h3>
+    <div class="line">${w.r}</div>
+    ${tag}
+    <div class="buy">${buy}</div>`;
+  return el;
+}
+
+WORKS.forEach(w => {
+  const g = document.querySelector(`[data-group="${w.g}"]`);
+  if (g) g.appendChild(card(w));
+});
+
+document.getElementById("contactBtn").href = mail("TA_ndinsky — office / commission enquiry");
+const more = document.getElementById("moreLink");
+if (MORE_FORMATS_URL) more.href = MORE_FORMATS_URL; else more.parentElement.style.display = "none";
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* lightbox */
+const lb = document.getElementById("lb");
+document.addEventListener("click", e => {
+  const img = e.target.closest("img[data-title]");
+  if (!img) return;
+  document.getElementById("lbimg").src = img.src;
+  document.getElementById("lbimg").alt = img.alt;
+  document.getElementById("lbt").textContent = img.dataset.title;
+  document.getElementById("lbr").textContent = img.dataset.reading;
+  lb.classList.add("on");
+});
+const close = () => lb.classList.remove("on");
+document.getElementById("lbx").onclick = close;
+lb.addEventListener("click", e => { if (e.target === lb) close(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+</script>
+</body>
+</html>
