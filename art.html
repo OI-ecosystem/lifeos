@@ -138,7 +138,7 @@
     <div>
       <div class="eyebrow">Series One · 33 works</div>
       <h1>Art made from the patterns traders trade.</h1>
-      <p>A trader who has always seen markets as shape and rhythm, now painting them: candlesticks, breakouts, crashes and the human moments behind them, in bold geometric abstraction.</p>
+      <p>A trader who has always seen markets as shape, scale and momentum, now painting them: candlesticks, breakouts, crashes and the human moments behind them, in bold geometric abstraction.</p>
       <p>Every work hides a signal. Look closely.</p>
       <p class="cap">Above: <em>The Triple Bottom</em> — Grand Master, token #333</p>
     </div>
@@ -227,8 +227,8 @@
     </section>
 
     <div class="info">
-      <div><h4>The prints</h4>Giclée fine-art prints on archival matte paper, in the original 16:9 proportions. Small, Medium and Large. Frame not included.</div>
-      <div><h4>Delivery &amp; returns</h4>Each print is made to order and shipped directly to you. Delivery and returns details are shown at checkout.</div>
+      <div><h4>The prints</h4>Giclée fine-art prints on 250gsm museum-quality archival matte paper. A3, A2 and A1, each with a white border around the original 16:9 artwork — fits standard frames. Frame not included.</div>
+      <div><h4>Delivery &amp; returns</h4>Free worldwide delivery. Each print is made to order and shipped directly to you, usually within 3–5 working days in the UK. International orders may take 1–2 weeks and may be subject to local import duties.</div>
       <div><h4>Provenance</h4>Every work is signed TA_ndinsky and recorded with its concept, versions and date. Limited editions come with a numbered certificate.</div>
     </div>
 
@@ -265,8 +265,12 @@ const PRICES = {
 // The page adds ?client_reference_id=<artwork> so each payment in Stripe
 // shows which artwork was bought.
 const SIZE_LINKS = {
-  open:    { S: "", M: "", L: "" },
-  limited: { S: "", M: "", L: "" }
+  open:    { S: "https://buy.stripe.com/00wcN55jo6kX7F0bbIbo400",
+             M: "https://buy.stripe.com/8x2dR9fY24cP2kG5Robo401",
+             L: "https://buy.stripe.com/9B6bJ1dPUdNp7F0bbIbo402" },
+  limited: { S: "https://buy.stripe.com/bJe9AT5jo24HaRc1B8bo403",
+             M: "https://buy.stripe.com/4gMdR94fkeRt2kGa7Ebo404",
+             L: "https://buy.stripe.com/9B6eVdfY2cJle3o1B8bo405" }
 };
 
 // OPTIONAL: a dedicated link for a specific piece and size overrides the above.
@@ -357,9 +361,10 @@ function card(w){
   } else {
     const p = PRICES[w.type], l = LINKS[w.id] || {}, sl = SIZE_LINKS[w.type] || {};
     const href = s => l[s] || (sl[s] ? sl[s] + (sl[s].includes("?") ? "&" : "?") + "client_reference_id=" + w.id : "");
+    const SZ = {S:"A3", M:"A2", L:"A1"};
     buy = ["S","M","L"].map(s => href(s)
-      ? `<a href="${href(s)}" target="_blank" rel="noopener">${s} · ${p[s]}</a>`
-      : `<span class="soon">${s} · ${p[s]}</span>`).join("");
+      ? `<a href="${href(s)}" target="_blank" rel="noopener">${SZ[s]} · ${p[s]}</a>`
+      : `<span class="soon">${SZ[s]} · ${p[s]}</span>`).join("");
   }
   const tag = w.type === "limited" ? `<span class="tag">Edition of 33</span>`
             : w.tag ? `<span class="tag">${w.tag}</span>` : "";
