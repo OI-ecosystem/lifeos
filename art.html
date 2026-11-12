@@ -215,7 +215,7 @@
         <div class="eyebrow">For offices, desks &amp; partners</div>
         <h2>Art that says what your firm does.</h2>
         <p style="color:#3c4250">For trading floors, prop firms, fintech and crypto offices, receptions and meeting rooms. Large formats, framing and installation can be arranged.</p>
-        <a class="btn" id="contactBtn" href="#">Enquire</a>
+        <a class="btn" id="contactBtn" href="#" data-goatcounter-click="enquire-offices">Enquire</a>
       </div>
       <ul>
         <li>Office packages — curated sets for a floor or reception</li>
@@ -357,13 +357,13 @@ function card(w){
   el.className = "work" + (w.wide ? " wide" : "");
   let buy = "";
   if (w.type === "master") {
-    buy = `<a class="enq" href="${mail("Enquiry: " + w.t + " (1/1)")}">Enquire · 1 of 1</a>`;
+    buy = `<a class="enq" href="${mail("Enquiry: " + w.t + " (1/1)")}" data-goatcounter-click="enquire-${w.id}">Enquire · 1 of 1</a>`;
   } else {
     const p = PRICES[w.type], l = LINKS[w.id] || {}, sl = SIZE_LINKS[w.type] || {};
     const href = s => l[s] || (sl[s] ? sl[s] + (sl[s].includes("?") ? "&" : "?") + "client_reference_id=" + w.id : "");
     const SZ = {S:"A3", M:"A2", L:"A1"};
     buy = ["S","M","L"].map(s => href(s)
-      ? `<a href="${href(s)}" target="_blank" rel="noopener">${SZ[s]} · ${p[s]}</a>`
+      ? `<a href="${href(s)}" target="_blank" rel="noopener" data-goatcounter-click="buy-${w.id}-${SZ[s]}" data-goatcounter-title="Buy ${w.t} ${SZ[s]}">${SZ[s]} · ${p[s]}</a>`
       : `<span class="soon">${SZ[s]} · ${p[s]}</span>`).join("");
   }
   const tag = w.type === "limited" ? `<span class="tag">Edition of 33</span>`
@@ -403,5 +403,6 @@ document.getElementById("lbx").onclick = close;
 lb.addEventListener("click", e => { if (e.target === lb) close(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
 </script>
+<script data-goatcounter="https://signal333.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
