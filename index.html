@@ -1161,6 +1161,142 @@ footer .footer-links a{font-size:11.5px}
   .entry-list a{flex-direction:column;gap:2px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+/* ── REBUILD, NOV 2026 ───────────────────── */
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+#systems{padding:16px 0 72px}
+.sys-card{position:relative;min-height:150px}
+.sys-card h3{font-size:21px}
+.sys-card h3.keepcase{font-family:var(--body);font-weight:600;font-size:18px;letter-spacing:.01em;line-height:1.5}
+.sys-card p{font-size:14px;line-height:1.55;color:var(--body-text);font-weight:400}
+.sys-card .sys-go{font-size:11.5px;font-weight:500}
+.sys-card.sys-featured p{font-size:15.5px}
+.sys-next{display:block;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;line-height:1.6;color:rgba(203,213,225,.9);max-width:640px}
+.sys-next .st{margin:0 10px 0 0;vertical-align:1px}
+.sys-card.sys-placeholder p,.sys-card.sys-quiet p{color:var(--muted)}
+.sys-card.sys-quiet{background:var(--bg2);border-style:dashed}
+.sys-card.sys-quiet:hover{transform:none;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.st{display:inline-block;margin-bottom:10px;font-size:9.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;border-radius:10px;white-space:nowrap}
+.st-live{color:#166534;background:#dcfce7}
+.st-soon{color:#475569;background:#e2e8f0}
+.st-dev{color:#92400e;background:#fef3c7}
+.sys-group{margin-top:38px}
+.sys-group-head{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.sys-group-name{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.sys-group-rule{flex:1;height:1px;background:var(--border-hi)}
+.sys-row{display:grid;gap:16px}
+.sys-row.n3{grid-template-columns:repeat(3,1fr)}
+.sys-row.n4{grid-template-columns:repeat(4,1fr)}
+.sys-row.n2{grid-template-columns:repeat(2,1fr)}
+.sys-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px}
+.sys-pair .sys-group{margin-top:38px}
+
+/* entry point */
+#who{padding:clamp(72px,9vw,120px) 0}
+.who-top{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:44px}
+.who-top h2{margin-bottom:0}
+.who-top .who-list li{font-size:16px;font-weight:400}
+.who-quote{font-size:19px;font-weight:300;font-style:italic;color:var(--text);line-height:1.6;border-left:3px solid var(--accent);padding-left:22px;margin-top:28px}
+.entry{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.04);padding:30px 34px 22px}
+.entry-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;margin-bottom:10px}
+.entry-head h3{font-family:var(--display);font-size:30px;letter-spacing:.04em;color:var(--text);line-height:1.1}
+.entry-head p{font-size:14.5px;color:var(--muted);font-weight:400}
+.entry-list{list-style:none;columns:2;column-gap:48px}
+.entry-list li{break-inside:avoid;border-bottom:1px solid var(--border)}
+.entry-list a{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:15px 0;font-size:15.5px;font-weight:400;color:var(--body-text);transition:color .2s}
+.entry-list a b{font-weight:500;color:var(--accent-dim);white-space:nowrap;font-size:14px}
+.entry-list a:hover{color:var(--text)}
+.entry-list a:hover b{text-decoration:underline;text-underline-offset:3px}
+
+/* art */
+#art{position:relative;background:#0b1220;color:#cbd5e1;padding:clamp(80px,10vw,128px) 0 clamp(72px,9vw,112px);overflow:hidden}
+#art::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 20%,rgba(245,158,11,0.10) 0%,transparent 70%);pointer-events:none}
+.art-head{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:end}
+.art-wide{position:relative;z-index:1;max-width:1240px;margin:48px auto 0;padding:0 clamp(16px,3vw,32px)}
+.art-main{display:block;border-radius:6px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12)}
+.art-main img{width:100%;height:auto}
+.art-cap{font-size:13px;color:#94a3b8;margin-top:12px;font-weight:400}
+.art-copy .label{color:#fbbf24;text-transform:none;font-size:12px;letter-spacing:.16em;font-weight:500}
+.art-copy h2{color:#fff;font-size:clamp(40px,5.4vw,66px)}
+.art-kicker{font-family:var(--display);font-size:24px;letter-spacing:.08em;color:#fbbf24;margin-bottom:14px}
+.art-copy p{font-size:16.5px;font-weight:300;color:#cbd5e1;margin-bottom:14px;max-width:30em}
+.art-copy h2{margin-bottom:0}
+.art-copy p.art-name{font-size:15px;color:#94a3b8;font-weight:400}
+.art-copy blockquote{font-size:17px;font-style:italic;color:#fff;border-left:3px solid #fbbf24;padding-left:18px;margin:18px 0 26px;max-width:26em}
+.art-btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn-gold{background:#fbbf24;color:#0b1220}
+.btn-gold:hover{background:#fcd34d;transform:translateY(-1px)}
+.art-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:44px;list-style:none}
+.art-strip a{display:block}
+.art-strip img{width:100%;height:auto;border-radius:4px;border:1px solid rgba(255,255,255,.12);transition:transform .25s,box-shadow .25s}
+.art-strip a:hover img{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.art-strip strong{display:block;font-family:var(--display);font-weight:400;font-size:17px;letter-spacing:.05em;color:#fff;margin-top:10px}
+.art-strip span{display:block;font-size:12.5px;line-height:1.45;color:#94a3b8;font-weight:400}
+
+/* how it fits + numbers */
+#how{padding:clamp(72px,9vw,120px) 0;background:var(--bg)}
+.how-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.how-head p{font-size:17px;color:var(--body-text);font-weight:400}
+.how-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:stretch}
+.how-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:30px 30px 26px;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.how-card h3{font-family:var(--display);font-size:34px;letter-spacing:.05em;color:var(--text);line-height:1}
+.how-card p{font-size:15.5px;font-weight:400;margin:10px 0 18px}
+.how-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.how-chips a{display:block;font-size:13px;font-weight:400;color:var(--body-text);background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:5px 12px;transition:border-color .2s,color .2s}
+.how-chips a:hover{border-color:var(--accent);color:var(--accent-dim)}
+.how-arrow{align-self:center;font-family:var(--display);font-size:44px;color:var(--accent)}
+.nums{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;border-top:1px solid var(--border-hi);border-bottom:1px solid var(--border-hi)}
+.num{padding:26px 18px;text-align:center;border-left:1px solid var(--border)}
+.num:first-child{border-left:0}
+.num b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(34px,4vw,48px);letter-spacing:.03em;color:var(--text);line-height:1}
+.num span{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:8px;line-height:1.4}
+.nums-foot{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px;font-weight:400}
+
+/* who is behind it */
+#about{padding:clamp(72px,9vw,112px) 0;background:var(--bg2);border-top:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.about-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:34px 34px 30px;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.about-card blockquote{font-size:18px;font-weight:300;line-height:1.65;color:var(--text)}
+.about-card cite{display:block;font-size:11px;font-style:normal;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:18px 0 24px}
+.about-btns{display:flex;flex-wrap:wrap;gap:12px}
+.about-grid > div > p{font-size:16px;font-weight:400;max-width:24em}
+
+footer .footer-links a{font-size:11.5px}
+.nav-links.open{display:flex}
+
+@media(max-width:900px){
+  .sys-row.n4{grid-template-columns:repeat(2,1fr)}
+  .sys-row.n3{grid-template-columns:repeat(2,1fr)}
+  .sys-pair{grid-template-columns:1fr}
+  .art-head{grid-template-columns:1fr;gap:24px}
+  .art-strip{grid-template-columns:repeat(3,1fr)}
+  .nums{grid-template-columns:repeat(3,1fr)}
+  .num:nth-child(4){border-left:0}
+  .num:nth-child(n+4){border-top:1px solid var(--border)}
+  .how-grid{grid-template-columns:1fr}
+  .how-arrow{transform:rotate(90deg);justify-self:center}
+}
+@media(max-width:768px){
+  .who-top,.about-grid{grid-template-columns:1fr;gap:28px}
+  .who-top{align-items:start}
+  .entry{padding:24px 20px 14px}
+  .entry-list{columns:1}
+  .nav-links.open{position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:#0b1220;border-bottom:1px solid rgba(255,255,255,.1);padding:8px 24px 14px}
+  .nav-links.open a{display:block;padding:13px 0;font-size:13px;color:rgba(255,255,255,.8)}
+  nav.light .nav-links.open{background:#f5f7fa;border-bottom:1px solid var(--border)}
+  nav.light .nav-links.open a{color:var(--text)}
+}
+@media(max-width:520px){
+  .sys-row.n4,.sys-row.n3,.sys-row.n2{grid-template-columns:1fr}
+  .art-strip{grid-template-columns:repeat(2,1fr)}
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .num{border-left:0;border-top:1px solid var(--border)}
+  .num:nth-child(-n+2){border-top:0}
+  .num:nth-child(even){border-left:1px solid var(--border)}
+  .num:last-child{grid-column:1 / -1;border-left:0}
+  .entry-list a{flex-direction:column;gap:2px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -1378,10 +1514,10 @@ footer .footer-links a{font-size:11.5px}
         <p>For partnerships, press, licensing and private enquiries, get in touch directly.</p>
       </div>
       <div class="about-card reveal" style="transition-delay:.12s">
-        <blockquote>Garry Short is a stock market trader, business strategist, and infrastructure architect whose work focuses on how opportunities emerge, how signals reveal them, and how decisions are made under conditions of uncertainty. He is the holder of patent-protected infrastructure across payment rails, supply chain governance, and insurance risk adjudication.</blockquote>
-        <cite>From the founder's LinkedIn profile</cite>
+        <blockquote>Stock market trader, business strategist, and infrastructure architect, whose work focuses on how opportunities emerge, how signals reveal them, and how decisions are made under conditions of uncertainty. Holder of patent-protected infrastructure across payment rails, supply chain governance, and insurance risk adjudication.</blockquote>
+        <cite>The founder</cite>
         <div class="about-btns">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/oisuite/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/oisuite/" target="_blank" rel="noopener">Meet the founder on LinkedIn</a>
           <a class="btn btn-ghost" href="mailto:hello@alpha333.org" style="text-transform:none;letter-spacing:.04em;font-size:14px">hello@alpha333.org</a>
         </div>
       </div>
