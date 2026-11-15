@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://alpha333.org/">
 <meta property="og:image" content="https://alpha333.org/the-triple-bottom.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Alpha333", "alternateName": "Signal333 Ventures", "url": "https://alpha333.org/", "description": "Alpha333 — a proprietary IP portfolio spanning financial markets, crypto, infrastructure, intelligence, and emerging digital economies.", "founder": {"@type": "Person", "name": "Garry Short", "sameAs": ["https://www.linkedin.com/in/oisuite/", "https://amazon.com/author/garryshort"]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Alpha333", "alternateName": "Signal333 Ventures", "url": "https://alpha333.org/", "email": "hello@alpha333.org", "sameAs": ["https://www.linkedin.com/in/oisuite/"], "description": "Alpha333 — a proprietary IP portfolio spanning financial markets, crypto, infrastructure, intelligence, and emerging digital economies."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Alpha333", "url": "https://alpha333.org/"}</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Bebas+Neue&display=swap');
@@ -1025,26 +1025,162 @@ footer{
   .footer-inner{flex-direction:column;text-align:center;}
   .footer-links{justify-content:center;}
 }
+
+/* ── REBUILD, NOV 2026 ───────────────────── */
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+#systems{padding:16px 0 72px}
+.sys-card{position:relative;min-height:150px}
+.sys-card h3{font-size:21px}
+.sys-card h3.keepcase{font-family:var(--body);font-weight:600;font-size:18px;letter-spacing:.01em;line-height:1.5}
+.sys-card p{font-size:14px;line-height:1.55;color:var(--body-text);font-weight:400}
+.sys-card .sys-go{font-size:11.5px;font-weight:500}
+.sys-card.sys-featured p{font-size:15.5px}
+.sys-next{display:block;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;line-height:1.6;color:rgba(203,213,225,.9);max-width:640px}
+.sys-next .st{margin:0 10px 0 0;vertical-align:1px}
+.sys-card.sys-placeholder p,.sys-card.sys-quiet p{color:var(--muted)}
+.sys-card.sys-quiet{background:var(--bg2);border-style:dashed}
+.sys-card.sys-quiet:hover{transform:none;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.st{display:inline-block;margin-bottom:10px;font-size:9.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;border-radius:10px;white-space:nowrap}
+.st-live{color:#166534;background:#dcfce7}
+.st-soon{color:#475569;background:#e2e8f0}
+.st-dev{color:#92400e;background:#fef3c7}
+.sys-group{margin-top:38px}
+.sys-group-head{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.sys-group-name{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.sys-group-rule{flex:1;height:1px;background:var(--border-hi)}
+.sys-row{display:grid;gap:16px}
+.sys-row.n3{grid-template-columns:repeat(3,1fr)}
+.sys-row.n4{grid-template-columns:repeat(4,1fr)}
+.sys-row.n2{grid-template-columns:repeat(2,1fr)}
+.sys-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px}
+.sys-pair .sys-group{margin-top:38px}
+
+/* entry point */
+#who{padding:clamp(72px,9vw,120px) 0}
+.who-top{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:44px}
+.who-top h2{margin-bottom:0}
+.who-top .who-list li{font-size:16px;font-weight:400}
+.who-quote{font-size:19px;font-weight:300;font-style:italic;color:var(--text);line-height:1.6;border-left:3px solid var(--accent);padding-left:22px;margin-top:28px}
+.entry{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.04);padding:30px 34px 22px}
+.entry-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;margin-bottom:10px}
+.entry-head h3{font-family:var(--display);font-size:30px;letter-spacing:.04em;color:var(--text);line-height:1.1}
+.entry-head p{font-size:14.5px;color:var(--muted);font-weight:400}
+.entry-list{list-style:none;columns:2;column-gap:48px}
+.entry-list li{break-inside:avoid;border-bottom:1px solid var(--border)}
+.entry-list a{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:15px 0;font-size:15.5px;font-weight:400;color:var(--body-text);transition:color .2s}
+.entry-list a b{font-weight:500;color:var(--accent-dim);white-space:nowrap;font-size:14px}
+.entry-list a:hover{color:var(--text)}
+.entry-list a:hover b{text-decoration:underline;text-underline-offset:3px}
+
+/* art */
+#art{position:relative;background:#0b1220;color:#cbd5e1;padding:clamp(80px,10vw,128px) 0 clamp(72px,9vw,112px);overflow:hidden}
+#art::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 20%,rgba(245,158,11,0.10) 0%,transparent 70%);pointer-events:none}
+.art-head{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:end}
+.art-wide{position:relative;z-index:1;max-width:1240px;margin:48px auto 0;padding:0 clamp(16px,3vw,32px)}
+.art-main{display:block;border-radius:6px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12)}
+.art-main img{width:100%;height:auto}
+.art-cap{font-size:13px;color:#94a3b8;margin-top:12px;font-weight:400}
+.art-copy .label{color:#fbbf24;text-transform:none;font-size:12px;letter-spacing:.16em;font-weight:500}
+.art-copy h2{color:#fff;font-size:clamp(40px,5.4vw,66px)}
+.art-kicker{font-family:var(--display);font-size:24px;letter-spacing:.08em;color:#fbbf24;margin-bottom:14px}
+.art-copy p{font-size:16.5px;font-weight:300;color:#cbd5e1;margin-bottom:14px;max-width:30em}
+.art-copy h2{margin-bottom:0}
+.art-copy p.art-name{font-size:15px;color:#94a3b8;font-weight:400}
+.art-copy blockquote{font-size:17px;font-style:italic;color:#fff;border-left:3px solid #fbbf24;padding-left:18px;margin:18px 0 26px;max-width:26em}
+.art-btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn-gold{background:#fbbf24;color:#0b1220}
+.btn-gold:hover{background:#fcd34d;transform:translateY(-1px)}
+.art-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:44px;list-style:none}
+.art-strip a{display:block}
+.art-strip img{width:100%;height:auto;border-radius:4px;border:1px solid rgba(255,255,255,.12);transition:transform .25s,box-shadow .25s}
+.art-strip a:hover img{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.art-strip strong{display:block;font-family:var(--display);font-weight:400;font-size:17px;letter-spacing:.05em;color:#fff;margin-top:10px}
+.art-strip span{display:block;font-size:12.5px;line-height:1.45;color:#94a3b8;font-weight:400}
+
+/* how it fits + numbers */
+#how{padding:clamp(72px,9vw,120px) 0;background:var(--bg)}
+.how-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.how-head p{font-size:17px;color:var(--body-text);font-weight:400}
+.how-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:stretch}
+.how-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:30px 30px 26px;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.how-card h3{font-family:var(--display);font-size:34px;letter-spacing:.05em;color:var(--text);line-height:1}
+.how-card p{font-size:15.5px;font-weight:400;margin:10px 0 18px}
+.how-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.how-chips a{display:block;font-size:13px;font-weight:400;color:var(--body-text);background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:5px 12px;transition:border-color .2s,color .2s}
+.how-chips a:hover{border-color:var(--accent);color:var(--accent-dim)}
+.how-arrow{align-self:center;font-family:var(--display);font-size:44px;color:var(--accent)}
+.nums{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;border-top:1px solid var(--border-hi);border-bottom:1px solid var(--border-hi)}
+.num{padding:26px 18px;text-align:center;border-left:1px solid var(--border)}
+.num:first-child{border-left:0}
+.num b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(34px,4vw,48px);letter-spacing:.03em;color:var(--text);line-height:1}
+.num span{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:8px;line-height:1.4}
+.nums-foot{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px;font-weight:400}
+
+/* who is behind it */
+#about{padding:clamp(72px,9vw,112px) 0;background:var(--bg2);border-top:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.about-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:34px 34px 30px;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.about-card blockquote{font-size:18px;font-weight:300;line-height:1.65;color:var(--text)}
+.about-card cite{display:block;font-size:11px;font-style:normal;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:18px 0 24px}
+.about-btns{display:flex;flex-wrap:wrap;gap:12px}
+.about-grid > div > p{font-size:16px;font-weight:400;max-width:24em}
+
+footer .footer-links a{font-size:11.5px}
+.nav-links.open{display:flex}
+
+@media(max-width:900px){
+  .sys-row.n4{grid-template-columns:repeat(2,1fr)}
+  .sys-row.n3{grid-template-columns:repeat(2,1fr)}
+  .sys-pair{grid-template-columns:1fr}
+  .art-head{grid-template-columns:1fr;gap:24px}
+  .art-strip{grid-template-columns:repeat(3,1fr)}
+  .nums{grid-template-columns:repeat(3,1fr)}
+  .num:nth-child(4){border-left:0}
+  .num:nth-child(n+4){border-top:1px solid var(--border)}
+  .how-grid{grid-template-columns:1fr}
+  .how-arrow{transform:rotate(90deg);justify-self:center}
+}
+@media(max-width:768px){
+  .who-top,.about-grid{grid-template-columns:1fr;gap:28px}
+  .who-top{align-items:start}
+  .entry{padding:24px 20px 14px}
+  .entry-list{columns:1}
+  .nav-links.open{position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:#0b1220;border-bottom:1px solid rgba(255,255,255,.1);padding:8px 24px 14px}
+  .nav-links.open a{display:block;padding:13px 0;font-size:13px;color:rgba(255,255,255,.8)}
+  nav.light .nav-links.open{background:#f5f7fa;border-bottom:1px solid var(--border)}
+  nav.light .nav-links.open a{color:var(--text)}
+}
+@media(max-width:520px){
+  .sys-row.n4,.sys-row.n3,.sys-row.n2{grid-template-columns:1fr}
+  .art-strip{grid-template-columns:repeat(2,1fr)}
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .num{border-left:0;border-top:1px solid var(--border)}
+  .num:nth-child(-n+2){border-top:0}
+  .num:nth-child(even){border-left:1px solid var(--border)}
+  .num:last-child{grid-column:1 / -1;border-left:0}
+  .entry-list a{flex-direction:column;gap:2px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 
 <!-- ── NAV ──────────────────────────────────── -->
 <nav>
-  <div class="nav-logo">ALPHA<span class="os">333</span></div>
-  <ul class="nav-links">
-    <li><a href="#what">Understanding</a></li>
-    <li><a href="#layers">Control</a></li>
-    <li><a href="#start-anywhere">Start</a></li>
+  <a class="nav-logo" href="#hero" aria-label="Alpha333, top of page">ALPHA<span class="os">333</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#systems">Portfolio</a></li>
+    <li><a href="#who">Start</a></li>
+    <li><a href="#art">Art</a></li>
     <li><a href="books.html">Books</a></li>
-    <li><a href="art.html">Art</a></li>
+    <li><a href="#about">Contact</a></li>
   </ul>
-  <button class="nav-hamburger" aria-label="Menu">
+  <button class="nav-hamburger" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- ── HERO (compact identity) ─────────────── -->
+<!-- ── HERO (unchanged) ─────────────────────── -->
 <section id="hero">
   <div class="container">
     <div class="hero-inner">
@@ -1058,298 +1194,200 @@ footer{
     </div>
   </div>
 </section>
-
-<!-- ── HERO → LIGHT BRIDGE ───────────────── -->
 <div id="hero-bridge"></div>
 
-<!-- ── ALL SIGNAL333 SYSTEMS ────────────────────── -->
-<section id="systems" style="padding:16px 0 40px;">
+<!-- ── THE PORTFOLIO ────────────────────────── -->
+<section id="systems">
   <div class="container">
+    <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">The portfolio</h2>
     <div class="sys-grid">
-
-      <a class="sys-card sys-featured reveal" href="https://signal333.com/" target="_blank">
-        <span class="sys-featured-badge">Flagship &middot; Now Live</span>
+      <a class="sys-card sys-featured reveal" href="https://signal333.com/" target="_blank" rel="noopener">
+        <span class="sys-featured-badge">Flagship</span>
         <div style="font-size:11px;letter-spacing:0.08em;color:var(--accent);text-transform:uppercase;margin-bottom:4px;">Signal333 Ventures</div>
         <h3>Signal Intelligence</h3>
         <p>See tomorrow's opportunities through the lens of history — live signal tracking across crypto, collectibles, AI, and energy, matched against validated historical precedent.</p>
         <span class="sys-go">Visit Signal Intelligence →</span>
+        <span class="sys-next"><span class="st st-dev">In development</span>Entities that prove themselves over time will become the precedents future signals are measured against.</span>
       </a>
-
-      <a class="sys-card reveal" href="https://lifekit333.com/" target="_blank">
-        <h3>LifeKit333</h3>
-        <p>Enter 1LINE about a situation or a decision. Get to the clarity that matters.</p>
-        <span class="sys-go">Visit LifeKit333 →</span>
-      </a>
-
-      <a class="sys-card reveal" href="https://oi-ecosystem.github.io/thinking-dojo/" target="_blank">
-        <h3>Thinking Dojo</h3>
-        <p>Helping younger minds build structure — notice, decide, act.</p>
-        <span class="sys-go">Visit Thinking Dojo →</span>
-      </a>
-
-      <a class="sys-card reveal" href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank">
-        <h3>Opportunity Intelligence</h3>
-        <p>Ten volumes on signal, pattern, decision, and strategy.</p>
-        <span class="sys-go">Explore the Series →</span>
-      </a>
-
-      <a class="sys-card reveal" href="https://oi-ecosystem.github.io/operator-stack/" target="_blank">
-        <h3>Operator Stack</h3>
-        <p>Notion templates built as a process stack — an operating system in itself.</p>
-        <span class="sys-go">View Operator Stack →</span>
-      </a>
-
-      <a class="sys-card reveal" href="https://discover333.com/" target="_blank">
-        <h3>Discovery / Visibility Intelligence</h3>
-        <p>Automated short-form publishing — how the ecosystem gets found.</p>
-        <span class="sys-go">Visit Discovery Publisher →</span>
-      </a>
-
-      <a class="sys-card reveal" href="https://oi-ecosystem.github.io/b-useful/" target="_blank">
-        <h3>B-Useful</h3>
-        <p>Practical tools built to be used, not admired.</p>
-        <span class="sys-go">Visit B-Useful →</span>
-      </a>
-
-      <a class="sys-card reveal" href="https://oi-ecosystem.github.io/airdrop-ecosystem/hunter-intelligence/index.html" target="_blank">
-        <h3>Hunter Intelligence</h3>
-        <p>AI-scored airdrop protocol intelligence — 20 protocols ranked on a 7-factor conviction model, live TVL data, daily briefings.</p>
-        <span class="sys-go">Visit Hunter Intelligence →</span>
-      </a>
-
-      <a class="sys-card reveal" href="https://oi-ecosystem.github.io/rcloop/" target="_blank">
-        <h3>RC Loop</h3>
-        <p>Resume and spreadsheet creator. Enter your details, get tailored expert documents.</p>
-        <span class="sys-go">Visit RC Loop →</span>
-      </a>
-
-      <a class="sys-card reveal" href="https://opensea.io/0xaf403f16e0c582daad19821e035a580faf29de57" target="_blank">
-        <h3>OpenSea</h3>
-        <p>NFTs and real-world asset drops from the Signal333 ecosystem.</p>
-        <span class="sys-go">Visit OpenSea →</span>
-      </a>
-
-      <a class="sys-card reveal" href="art.html">
-        <h3>TA_ndinsky</h3>
-        <p>Art made from the patterns traders trade — chart patterns and market moments in bold geometric abstraction. Series One: 33 works.</p>
-        <span class="sys-go">Visit the Gallery →</span>
-      </a>
-
-      <div class="sys-card sys-placeholder reveal">
-        <h3>Prospect Intelligence</h3>
-        <p>Find REAL market contacts.</p>
-        <span class="sys-go sys-go--placeholder">Coming Soon</span>
-      </div>
-
-      <a class="sys-card reveal" href="https://tcard333.com/" target="_blank">
-        <h3>Card Genesis</h3>
-        <p>Trading card collector intelligence — precedent, provenance, and value trajectory.</p>
-        <span class="sys-go">Visit Card Genesis →</span>
-      </a>
-
-      <div class="sys-card reveal">
-        <h3>Publication Intelligence</h3>
-        <p>Automated intelligence briefings and newsletter delivery.</p>
-        <span class="sys-go" style="display:block;color:var(--faint);text-transform:none;letter-spacing:0.01em;font-style:italic;">In-house infrastructure — powers monetised briefings across the portfolio.</span>
-        <span class="sys-go" style="display:block;color:var(--faint);text-transform:none;letter-spacing:0.01em;font-style:italic;margin-top:4px;">Proprietary. Not for public access.</span>
-      </div>
-
     </div>
-  </div>
-</section>
 
-<!-- ── PHILOSOPHY (moved from hero) ─────────── -->
-<section id="philosophy">
-  <div class="container">
-    <div class="hero-inner reveal">
-      <div class="label label--accent" style="text-align:center;">The Alpha333 Philosophy</div>
-      <div class="phil-statement">Understanding &rarr; Control.</div>
-      <div class="phil-human">Life gets complex. This gives you structure.</div>
-      <div class="phil-arrow">
-        <span class="phil-arrow-label">Understanding</span>
-        <span class="phil-arrow-line"></span>
-        <span class="phil-arrow-head">leads to</span>
-        <span class="phil-arrow-line"></span>
-        <span class="phil-arrow-label">Control</span>
-      </div>
-      <p class="phil-desc">
-        Every system in the portfolio follows the same architecture: understand what matters, then turn that understanding into structure, decisions, and forward movement.
-      </p>
-      <div class="phil-buttons">
-        <a href="#what" class="btn btn-primary">What is Alpha<span class="os">333</span></a>
-        <a href="#layers" class="btn btn-ghost-dark">See how it works</a>
-        <a href="books.html" class="btn btn-ghost-dark">The Library</a>
+    <div class="sys-group">
+      <div class="sys-group-head"><span class="sys-group-name">Intelligence</span><span class="sys-group-rule"></span></div>
+      <div class="sys-row n3">
+        <a class="sys-card  reveal" href="https://tcard333.com/" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3>Card Genesis</h3><p>Trading card collector intelligence: precedent, provenance and value trajectory.</p><span class="sys-go">Visit Card Genesis →</span></a>
+        <a class="sys-card  reveal" href="https://oi-ecosystem.github.io/airdrop-ecosystem/hunter-intelligence/index.html" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3>Hunter Intelligence</h3><p>Airdrop protocol intelligence. 20 protocols ranked on a 7-factor conviction model, with live TVL data and daily briefings.</p><span class="sys-go">Visit Hunter Intelligence →</span></a>
+        <div class="sys-card sys-placeholder reveal"><span class="st st-soon">Coming soon</span><h3>Prospect Intelligence</h3><p>Find real market contacts.</p></div>
       </div>
     </div>
-  </div>
-</section>
-<div id="philosophy-bridge"></div>
-
-<!-- ── WHAT IS LIFE OS ──────────────────────── -->
-<section id="what">
-  <div class="container">
-    <div class="what-grid">
-      <div class="what-text reveal">
-        <span class="label label--accent">What it is</span>
-        <div class="section-rule"></div>
-        <h2>What is<br>ALPHA<span class="os">333</span>?</h2>
-        <p>ALPHA<span class="os">333</span> is a technology and IP portfolio — spanning finance, markets, infrastructure, intelligence, consumer systems, and future technologies.</p>
-        <p>Every system inside it follows the same architecture: understanding a domain, then turning that understanding into structured control.</p>
-        <p>You can start anywhere. The portfolio builds as you go.</p>
+    <div class="sys-group">
+      <div class="sys-group-head"><span class="sys-group-name">Everyday tools</span><span class="sys-group-rule"></span></div>
+      <div class="sys-row n4">
+        <a class="sys-card  reveal" href="https://lifekit333.com/" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3>LifeKit333</h3><p>Describe it in one line, in your own words, and get a full, structured read. 21 tools for homes, bills, scams, complaints and more.</p><span class="sys-go">Visit LifeKit333 →</span></a>
+        <a class="sys-card  reveal" href="https://oi-ecosystem.github.io/rcloop/" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3>RC Loop</h3><p>A résumé and a personal finance spreadsheet, each built from your own details.</p><span class="sys-go">Visit RC Loop →</span></a>
+        <a class="sys-card  reveal" href="https://oi-ecosystem.github.io/operator-stack/" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3>Operator Stack</h3><p>Notion templates built as a process stack: an operating system in itself.</p><span class="sys-go">View Operator Stack →</span></a>
+        <a class="sys-card  reveal" href="https://oi-ecosystem.github.io/b-useful/" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3>B-Useful</h3><p>Practical tools built to be used, not admired.</p><span class="sys-go">Visit B-Useful →</span></a>
       </div>
-      <div class="what-pillars reveal" style="transition-delay:.15s">
-        <div class="pillar">
-          <div class="pillar-dot"></div>
-          <div>
-            <div class="pillar-name">Understanding</div>
-            <div class="pillar-desc">See clearly. Know what matters. Build a stronger point of view before you act.<br><em style="color:var(--accent);font-size:12px;letter-spacing:0.06em;">Know what matters before you act.</em></div>
-          </div>
+    </div>
+    <div class="sys-group">
+      <div class="sys-group-head"><span class="sys-group-name">Learning and books</span><span class="sys-group-rule"></span></div>
+      <div class="sys-row n3">
+        <a class="sys-card  reveal" href="https://oi-ecosystem.github.io/thinking-dojo/" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3>Thinking Dojo</h3><p>Helping younger minds build structure: notice, decide, act. For ages 7 to 13.</p><span class="sys-go">Visit Thinking Dojo →</span></a>
+        <a class="sys-card  reveal" href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3>Opportunity Intelligence</h3><p>Ten volumes on signal, pattern, decision and strategy.</p><span class="sys-go">Explore the series →</span></a>
+        <a class="sys-card  reveal" href="books.html"><span class="st st-live">Live</span><h3>The Library</h3><p>Every book in the portfolio, in one place.</p><span class="sys-go">Open the library →</span></a>
+      </div>
+    </div>
+
+    <div class="sys-pair">
+      <div class="sys-group">
+        <div class="sys-group-head"><span class="sys-group-name">Collectibles and art</span><span class="sys-group-rule"></span></div>
+        <div class="sys-row n2">
+          <a class="sys-card  reveal" href="https://opensea.io/0xaf403f16e0c582daad19821e035a580faf29de57" target="_blank" rel="noopener"><span class="st st-live">Live</span><h3 class="keepcase"><span class="kc">PSiiSP</span></h3><p>Rare and scarce designer pieces, offered as tokenised real-world assets.</p><span class="sys-go">View on OpenSea →</span></a>
+          <a class="sys-card  reveal" href="art.html"><span class="st st-live">Live</span><h3 class="keepcase"><span class="kc">TA_ndinsky</span></h3><p>Art made from the patterns traders trade. Series One: 33 works.</p><span class="sys-go">Visit the gallery →</span></a>
         </div>
-        <div class="pillar">
-          <div class="pillar-dot"></div>
-          <div>
-            <div class="pillar-name">Control</div>
-            <div class="pillar-desc">Turn that understanding into structure, decisions, and forward movement.<br><em style="color:var(--accent);font-size:12px;letter-spacing:0.06em;">Turn clarity into structured action.</em></div>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-dot"></div>
-          <div>
-            <div class="pillar-name">Modular by design</div>
-            <div class="pillar-desc">Start with one layer. Use both when you're ready. The system grows with you.</div>
-          </div>
+      </div>
+      <div class="sys-group">
+        <div class="sys-group-head"><span class="sys-group-name">In development</span><span class="sys-group-rule"></span></div>
+        <div class="sys-row n2">
+          <a class="sys-card  reveal" href="https://discover333.com/" target="_blank" rel="noopener"><span class="st st-dev">In development</span><h3>Discovery / Visibility Intelligence</h3><p>Automated short-form publishing: how the portfolio gets found. Awaiting platform approval.</p><span class="sys-go">See Discover333 →</span></a>
+          <div class="sys-card sys-quiet reveal"><span class="st st-dev">In development</span><h3>Publication Intelligence</h3><p>Automated intelligence briefings and newsletter delivery. Awaiting platform approval.</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── TWO LAYERS ───────────────────────────── -->
-<section id="layers">
-  <div class="container">
-    <div class="layers-head reveal">
-      <span class="label">Core structure</span>
-      <div class="section-rule" style="margin:0 auto 18px;"></div>
-      <h2>Two layers.<br>Multiple systems.<br>One architecture.</h2>
-      <p>Every system in ALPHA<span class="os">333</span> sits inside one of two layers. Together, they form the architecture.</p>
-      <p style="font-size:14px;color:var(--muted);margin-top:10px;">Most people build one layer. ALPHA<span class="os">333</span> connects both.</p>
-    </div>
-    <div class="layers-grid">
-      <div class="layer-card reveal">
-        <div class="layer-number">01</div>
-        <div class="layer-name">Understanding</div>
-        <p class="layer-desc">See clearly. Understand what matters. Build a stronger point of view before you commit to any action.</p>
-        <p class="layer-desc" style="margin-top:10px;">Opportunity Intelligence is a structured framework for understanding signal, pattern, and decision-making. Built for people who want to see more clearly before they act, not after.</p>
-        <div class="layer-includes">
-          <span>Opportunity Intelligence</span>
-          <span>Signal Intelligence</span>
-          <span>Hunter Intelligence</span>
-          <span>LifeKit333</span>
-          <span>Thinking Dojo</span>
-          <span>Discovery Intelligence</span>
-        </div>
-        <div class="layer-buttons">
-          <a href="https://oi-ecosystem.github.io/opportunity-intelligence/" class="btn btn-primary btn-small" target="_blank">View Opportunity Intelligence</a>
-          <a href="https://amazon.com/author/garryshort" class="btn btn-ghost btn-small" target="_blank">Explore the Books</a>
-        </div>
-      </div>
-      <div class="layer-card reveal" style="transition-delay:.15s">
-        <div class="layer-number">02</div>
-        <div class="layer-name">Control</div>
-        <p class="layer-desc">Turn understanding into structure, decisions, and forward movement. Stop reacting. Start operating.</p>
-        <p class="layer-desc" style="margin-top:10px;">Operator Stack is a modular system for execution, decisions, and structured action. Built for people who want to move with clarity, not just intention.</p>
-        <div class="layer-includes">
-          <span>Operator Stack</span>
-          <span>RC Loop</span>
-          <span>B-Useful</span>
-        </div>
-        <div class="layer-buttons">
-          <a href="https://oi-ecosystem.github.io/operator-stack/" class="btn btn-primary btn-small" target="_blank">View Operator Stack</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="start-anywhere">
-  <div class="container">
-    <div class="start-anywhere-inner reveal">
-      <h3>Start anywhere. Get value immediately.</h3>
-      <p class="sa-sub">You don't need the full system to begin.</p>
-      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Start with what you need:</p>
-      <div class="sa-items">
-        <div class="sa-item">
-          <span class="sa-item-label">Plan your life?</span>
-          <span class="sa-item-arrow">→</span>
-          <span class="sa-item-desc">1LINE Coach <span style="color:var(--faint);">(part of LifeKit333)</span></span>
-        </div>
-        <div class="sa-item">
-          <span class="sa-item-label">Control your money?</span>
-          <span class="sa-item-arrow">→</span>
-          <span class="sa-item-desc">RCLOOP <span style="color:var(--faint);">(Quickstart Spreadsheet — tailored to YOUR circumstances)</span></span>
-        </div>
-        <div class="sa-item">
-          <span class="sa-item-label">Control your career?</span>
-          <span class="sa-item-arrow">→</span>
-          <span class="sa-item-desc">RCLOOP <span style="color:var(--faint);">(Resume Creator — ATS standard and structured)</span></span>
-        </div>
-        <div class="sa-closer">
-          <span class="sa-closer-label">And when you're ready:</span>
-        </div>
-        <div class="sa-closer" style="border-top:none;padding-top:0;">
-          <span class="sa-closer-label">ALPHA<span class="os">333</span></span>
-          <span class="sa-closer-arrow">→</span>
-          <span class="sa-closer-desc">see how it all connects</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── WHO ───────────────────────────────────── -->
+<!-- ── WHO IT IS FOR + ENTRY POINT ──────────── -->
 <section id="who">
   <div class="container">
-    <div class="who-grid">
+    <div class="who-top">
       <div class="reveal">
         <span class="label">Who it is for</span>
         <div class="section-rule"></div>
         <h2>Built for<br>people who<br>want more.</h2>
-        <ul class="who-list">
-          <li>People who want control over their decisions</li>
-          <li>People who want structure, not motivation</li>
-          <li>People who want clarity before acting</li>
-          <li>People who are tired of reacting</li>
-          <li>People ready to operate with intent</li>
-        </ul>
+        <p class="who-quote">"Most people move without understanding. Or understand without moving. ALPHA<span class="os">333</span> bridges the gap."</p>
       </div>
-      <div class="who-statement reveal" style="transition-delay:.15s">
-        <blockquote>
-          "Most people move without understanding. Or understand without moving. ALPHA<span class="os">333</span> bridges the gap."
-        </blockquote>
-        <cite>ALPHA<span class="os">333</span> — The System</cite>
-        <div style="margin-top:28px;">
-          <a href="#" class="btn btn-primary" id="entry-point-toggle" onclick="var o=document.getElementById('entry-point-options');var open=o.style.display==='block';o.style.display=open?'none':'block';this.textContent=open?'Find your entry point':'Hide options';return false;">Find your entry point</a>
-          <div id="entry-point-options" style="display:none;margin-top:8px;">
-            <ul class="who-list" style="gap:0;">
-              <li><a href="https://oi-ecosystem.github.io/rcloop/" target="_blank" style="color:inherit;text-decoration:none;">I need a CV → RC Loop</a></li>
-              <li><a href="https://oi-ecosystem.github.io/operator-stack/" target="_blank" style="color:inherit;text-decoration:none;">I want to plan my week → Operator Stack (Weekly)</a></li>
-              <li><a href="https://oi-ecosystem.github.io/operator-stack/" target="_blank" style="color:inherit;text-decoration:none;">I want to control my money → Operator Stack (Income)</a></li>
-              <li><a href="https://lifekit333.com/" target="_blank" style="color:inherit;text-decoration:none;">I need clarity on a decision → LifeKit333</a></li>
-              <li><a href="https://signal333.com/" target="_blank" style="color:inherit;text-decoration:none;">I want to spot market opportunities → Signal Intelligence</a></li>
-              <li><a href="https://oi-ecosystem.github.io/airdrop-ecosystem/hunter-intelligence/index.html" target="_blank" style="color:inherit;text-decoration:none;">I'm into crypto airdrops → Hunter Intelligence</a></li>
-              <li><a href="https://oi-ecosystem.github.io/thinking-dojo/" target="_blank" style="color:inherit;text-decoration:none;">I want to help a young mind think clearly → Thinking Dojo</a></li>
-              <li><a href="https://oi-ecosystem.github.io/b-useful/" target="_blank" style="color:inherit;text-decoration:none;">I want practical tools, not theory → B-Useful</a></li>
-              <li><a href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank" style="color:inherit;text-decoration:none;">I want the philosophy behind all this → The Books</a></li>
-              <li><a href="https://discover333.com/" target="_blank" style="color:inherit;text-decoration:none;">I want to know how it all gets found → Discovery / Visibility Intelligence</a></li>
-              <li><a href="https://opensea.io/0xaf403f16e0c582daad19821e035a580faf29de57" target="_blank" style="color:inherit;text-decoration:none;">I want NFTs or real-world asset drops → OpenSea</a></li>
-            </ul>
-          </div>
+      <ul class="who-list reveal" style="transition-delay:.12s">
+        <li>People who want control over their decisions</li>
+        <li>People who want structure, not motivation</li>
+        <li>People who want clarity before acting</li>
+        <li>People who are tired of reacting</li>
+        <li>People ready to operate with intent</li>
+      </ul>
+    </div>
+    <div class="entry reveal" id="entry-point">
+      <div class="entry-head">
+        <h3>Find your entry point</h3>
+        <p>Start with what you need today.</p>
+      </div>
+      <ul class="entry-list">
+          <li><a href="https://lifekit333.com/legit_folder.html" target="_blank" rel="noopener"><span>Is this message a scam?</span><b>LifeKit333 · Legit →</b></a></li>
+          <li><a href="https://lifekit333.com/property_folder.html" target="_blank" rel="noopener"><span>What is my house doing?</span><b>LifeKit333 · Property →</b></a></li>
+          <li><a href="https://lifekit333.com/" target="_blank" rel="noopener"><span>I need clarity on a decision</span><b>LifeKit333 →</b></a></li>
+          <li><a href="https://oi-ecosystem.github.io/rcloop/#resume-sec" target="_blank" rel="noopener"><span>I need a CV</span><b>RC Loop →</b></a></li>
+          <li><a href="https://oi-ecosystem.github.io/rcloop/#sheet-sec" target="_blank" rel="noopener"><span>I want to control my money</span><b>RC Loop · Spreadsheet →</b></a></li>
+          <li><a href="https://oi-ecosystem.github.io/operator-stack/" target="_blank" rel="noopener"><span>I want to plan my week</span><b>Operator Stack →</b></a></li>
+          <li><a href="https://oi-ecosystem.github.io/b-useful/" target="_blank" rel="noopener"><span>I want practical tools, not theory</span><b>B-Useful →</b></a></li>
+          <li><a href="https://signal333.com/" target="_blank" rel="noopener"><span>I want to spot market opportunities</span><b>Signal Intelligence →</b></a></li>
+          <li><a href="https://tcard333.com/" target="_blank" rel="noopener"><span>Is this trading card moving?</span><b>Card Genesis →</b></a></li>
+          <li><a href="https://oi-ecosystem.github.io/airdrop-ecosystem/hunter-intelligence/index.html" target="_blank" rel="noopener"><span>I’m into crypto airdrops</span><b>Hunter Intelligence →</b></a></li>
+          <li><a href="https://oi-ecosystem.github.io/thinking-dojo/" target="_blank" rel="noopener"><span>I want to help a young mind think clearly</span><b>Thinking Dojo →</b></a></li>
+          <li><a href="books.html"><span>I want the thinking behind all this</span><b>The Books →</b></a></li>
+          <li><a href="art.html"><span>I want art that says what I do</span><b>TA_ndinsky →</b></a></li>
+          <li><a href="https://opensea.io/0xaf403f16e0c582daad19821e035a580faf29de57" target="_blank" rel="noopener"><span>I collect rare designer pieces</span><b>PSiiSP →</b></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE ART ──────────────────────────────── -->
+<section id="art">
+  <div class="container">
+    <div class="art-head">
+      <div class="art-copy reveal">
+        <span class="label">TA_ndinsky &middot; Series One &middot; 33 works</span>
+        <div class="art-kicker">Trader meets Kandinsky.</div>
+        <h2>Art made from the patterns traders trade.</h2>
+      </div>
+      <div class="art-copy reveal" style="transition-delay:.12s">
+        <p>Candlesticks, breakouts, crashes and the human moments behind them, in bold geometric abstraction. Every work hides a signal. Look closely.</p>
+        <p class="art-name">TA is technical analysis: the trader’s craft of reading shape in a chart. The name is a nod to Wassily Kandinsky, whose geometric abstraction inspired the series.</p>
+        <blockquote>“Non-traders see a painting. Traders see the pattern. The rest is finding the signal.”</blockquote>
+        <div class="art-btns">
+          <a class="btn btn-gold" href="art.html">Enter the gallery</a>
+          <a class="btn btn-ghost-dark" href="art.html#offices">Art for offices and collectors</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="art-wide reveal">
+    <a class="art-main" href="art.html"><img src="art/web/the-triple-bottom.jpg" width="1400" height="788" loading="lazy" alt="The Triple Bottom, by TA_ndinsky: decades of markets in one sweep of bold geometric abstraction"></a>
+    <p class="art-cap"><em>The Triple Bottom</em> — Grand Master, token #333. Three times the floor was tested. Three times it held.</p>
+  </div>
+  <div class="container">
+    <ul class="art-strip reveal">
+        <li><a href="art.html"><img src="art/web/head-and-shoulders.jpg" width="720" height="405" loading="lazy" alt="Head and Shoulders, by TA_ndinsky"><strong>Head and Shoulders</strong><span>Three towers, one neckline.</span></a></li>
+        <li><a href="art.html"><img src="art/web/cup-and-handle.jpg" width="720" height="405" loading="lazy" alt="Cup and Handle, by TA_ndinsky"><strong>Cup and Handle</strong><span>The base, the pause, the breakout.</span></a></li>
+        <li><a href="art.html"><img src="art/web/black-monday.jpg" width="720" height="405" loading="lazy" alt="Black Monday, by TA_ndinsky"><strong>Black Monday</strong><span>19 October 1987. Three tests of the high, then the fracture.</span></a></li>
+        <li><a href="art.html"><img src="art/web/signal-i.jpg" width="720" height="405" loading="lazy" alt="Signal I, by TA_ndinsky"><strong>Signal I</strong><span>Dawn. A spiral in the wheat.</span></a></li>
+        <li><a href="art.html"><img src="art/web/the-code-of-life.jpg" width="720" height="405" loading="lazy" alt="The Code of Life, by TA_ndinsky"><strong>The Code of Life</strong><span>A double helix, built from candles.</span></a></li>
+        <li><a href="art.html"><img src="art/web/lightning.jpg" width="720" height="405" loading="lazy" alt="Lightning, by TA_ndinsky"><strong>Lightning</strong><span>One bolt through fractured planes.</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── HOW IT FITS TOGETHER + NUMBERS ───────── -->
+<section id="how">
+  <div class="container">
+    <div class="how-head reveal">
+      <span class="label label--accent">One architecture</span>
+      <h2>Understanding &rarr; Control.</h2>
+      <p>Every system in the portfolio follows the same architecture: understand what matters, then turn that understanding into structure, decisions and forward movement.</p>
+    </div>
+    <div class="how-grid reveal">
+      <div class="how-card">
+        <h3>Understanding</h3>
+        <p>See clearly. Know what matters before you act.</p>
+        <ul class="how-chips"><li><a href="https://signal333.com/" target="_blank" rel="noopener">Signal Intelligence</a></li><li><a href="https://tcard333.com/" target="_blank" rel="noopener">Card Genesis</a></li><li><a href="https://oi-ecosystem.github.io/airdrop-ecosystem/hunter-intelligence/index.html" target="_blank" rel="noopener">Hunter Intelligence</a></li><li><a href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank" rel="noopener">Opportunity Intelligence</a></li><li><a href="https://lifekit333.com/" target="_blank" rel="noopener">LifeKit333</a></li><li><a href="https://oi-ecosystem.github.io/thinking-dojo/" target="_blank" rel="noopener">Thinking Dojo</a></li></ul>
+      </div>
+      <div class="how-arrow" aria-hidden="true">&rarr;</div>
+      <div class="how-card">
+        <h3>Control</h3>
+        <p>Turn clarity into structured action.</p>
+        <ul class="how-chips"><li><a href="https://oi-ecosystem.github.io/operator-stack/" target="_blank" rel="noopener">Operator Stack</a></li><li><a href="https://oi-ecosystem.github.io/rcloop/" target="_blank" rel="noopener">RC Loop</a></li><li><a href="https://oi-ecosystem.github.io/b-useful/" target="_blank" rel="noopener">B-Useful</a></li></ul>
+      </div>
+    </div>
+    <div class="nums reveal">
+      <div class="num"><b data-snap="entities">6,914</b><span>entities tracked by Signal Intelligence</span></div>
+      <div class="num"><b data-snap="signals">411,768</b><span>signals processed</span></div>
+      <div class="num"><b>21</b><span>one-line tools in LifeKit333</span></div>
+      <div class="num"><b>10</b><span>volumes of Opportunity Intelligence</span></div>
+      <div class="num"><b>33</b><span>works in TA_ndinsky Series One</span></div>
+    </div>
+    <p class="nums-foot" data-snap-foot>Signal Intelligence figures: reading of 15 Nov 2026, 11:01 UTC.</p>
+  </div>
+</section>
+
+<!-- ── WHO IS BEHIND IT ─────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="label">Who is behind it</span>
+        <div class="section-rule"></div>
+        <h2>One founder.<br>One portfolio.</h2>
+        <p>For partnerships, press, licensing and private enquiries, get in touch directly.</p>
+      </div>
+      <div class="about-card reveal" style="transition-delay:.12s">
+        <blockquote>Garry Short is a stock market trader, business strategist, and infrastructure architect whose work focuses on how opportunities emerge, how signals reveal them, and how decisions are made under conditions of uncertainty. He is the holder of patent-protected infrastructure across payment rails, supply chain governance, and insurance risk adjudication.</blockquote>
+        <cite>From the founder's LinkedIn profile</cite>
+        <div class="about-btns">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/oisuite/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="btn btn-ghost" href="mailto:hello@alpha333.org" style="text-transform:none;letter-spacing:.04em;font-size:14px">hello@alpha333.org</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- ── FOOTER ─────────────────────────────────── -->
 <footer>
@@ -1357,11 +1395,12 @@ footer{
     <div class="footer-inner">
       <div class="footer-brand">ALPHA<span class="os">333</span></div>
       <ul class="footer-links">
-        <li><a href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank">Opportunity Intelligence</a></li>
-        <li><a href="https://oi-ecosystem.github.io/operator-stack/" target="_blank">Operator Stack</a></li>
+        <li><a href="#systems">Portfolio</a></li>
         <li><a href="books.html">Books</a></li>
-        <li><a href="https://amazon.com/author/garryshort" target="_blank">Amazon</a></li>
-        <li><a href="https://oi-ecosystem.github.io/opportunity-intelligence/" target="_blank">Access</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="https://amazon.com/author/garryshort" target="_blank" rel="noopener">Amazon</a></li>
+        <li><a href="https://www.linkedin.com/in/oisuite/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:hello@alpha333.org" style="text-transform:none;letter-spacing:.04em">hello@alpha333.org</a></li>
       </ul>
       <div style="font-size:0.75rem;color:var(--faint);margin-top:8px;">Signal333 Publishing</div>
       <div class="footer-copy">ALPHA<span class="os">333</span> &mdash; Understanding → Control</div>
@@ -1372,52 +1411,47 @@ footer{
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
     });
-  }, { threshold: 0.12 });
-
+  }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   const nav = document.querySelector('nav');
   const heroEl = document.getElementById('hero');
-
   function updateNav(){
     const heroBottom = heroEl.offsetTop + heroEl.offsetHeight;
-    if(window.scrollY > heroBottom - 80){
-      nav.classList.add('light');
-    } else {
-      nav.classList.remove('light');
-    }
+    nav.classList.toggle('light', window.scrollY > heroBottom - 80);
   }
   window.addEventListener('scroll', updateNav, {passive:true});
   updateNav();
 
   const hamburger = document.querySelector('.nav-hamburger');
+  const links = document.querySelector('.nav-links');
   hamburger.addEventListener('click', () => {
-    document.querySelector('#what').scrollIntoView({ behavior: 'smooth' });
+    const open = links.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+  links.addEventListener('click', (e) => { if (e.target.closest('a')) { links.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); } });
 
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navLinks.forEach(a => {
-          a.style.color = a.getAttribute('href') === '#' + e.target.id
-            ? 'var(--text)'
-            : '';
-        });
-      }
-    });
-  }, { threshold: 0.4 });
-
-  sections.forEach(s => navObserver.observe(s));
+  /* Signal Intelligence figures: read from the file signal333.com publishes hourly.
+     If the file cannot be read or is old, the typed figures stay and the line below says which reading they are. */
+  (function () {
+    var foot = document.querySelector('[data-snap-foot]');
+    function ok(x) { return typeof x === 'number' && isFinite(x); }
+    fetch('https://signal333.com/data/site-snapshot.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      if (!d || d.live !== true || !d.as_of) return;
+      var t = new Date(d.as_of); if (isNaN(t.getTime())) return;
+      document.querySelectorAll('[data-snap]').forEach(function (el) {
+        var v = d[el.getAttribute('data-snap')]; if (ok(v)) el.textContent = v.toLocaleString('en-GB');
+      });
+      var maxAge = Number(d.max_age_hours) > 0 ? Number(d.max_age_hours) : 24;
+      var fresh = (Date.now() - t.getTime()) / 36e5 <= maxAge;
+      var stamp = t.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) + ', ' +
+                  t.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'UTC' }) + ' UTC';
+      if (foot) foot.textContent = (fresh ? 'Signal Intelligence figures are live. Last reading ' : 'Signal Intelligence figures: reading of ') + stamp + '.';
+    }).catch(function () {});
+  })();
 </script>
-
 
 <script data-goatcounter="https://signal333.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
